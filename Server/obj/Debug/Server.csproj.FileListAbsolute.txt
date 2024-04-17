@@ -1,0 +1,53 @@
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\chat\chat\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\chat\chat\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\chat\chat\Server\bin\Debug\Server.exe.config
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\chat\chat\Server\bin\Debug\Server.exe
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\chat\chat\Server\bin\Debug\Server.pdb
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\chat\chat\Server\obj\Debug\Server.exe
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\chat\chat\Server\obj\Debug\Server.pdb
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\Server\bin\Debug\Server.exe.config
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\Server\bin\Debug\Server.exe
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\Server\bin\Debug\Server.pdb
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\Server\obj\Debug\Server.exe
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\Server\obj\Debug\Server.pdb
+G:\Shared drives\Trabalhos de Grupo\2º Semestre\Tópicos de Segurança\topicosseguranca\Server\bin\Debug\Server.exe.config
+G:\Shared drives\Trabalhos de Grupo\2º Semestre\Tópicos de Segurança\topicosseguranca\Server\bin\Debug\Server.exe
+G:\Shared drives\Trabalhos de Grupo\2º Semestre\Tópicos de Segurança\topicosseguranca\Server\bin\Debug\Server.pdb
+G:\Shared drives\Trabalhos de Grupo\2º Semestre\Tópicos de Segurança\topicosseguranca\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+G:\Shared drives\Trabalhos de Grupo\2º Semestre\Tópicos de Segurança\topicosseguranca\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+G:\Shared drives\Trabalhos de Grupo\2º Semestre\Tópicos de Segurança\topicosseguranca\Server\obj\Debug\Server.exe
+G:\Shared drives\Trabalhos de Grupo\2º Semestre\Tópicos de Segurança\topicosseguranca\Server\obj\Debug\Server.pdb
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca\Server\bin\Debug\Server.exe.config
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca\Server\bin\Debug\Server.exe
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca\Server\bin\Debug\Server.pdb
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca\Server\obj\Debug\Server.exe
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca\Server\obj\Debug\Server.pdb
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\Server\bin\Debug\Server.exe.config
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\Server\bin\Debug\Server.exe
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\Server\bin\Debug\Server.pdb
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\Server\obj\Debug\Server.exe
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\Server\obj\Debug\Server.pdb
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\Server\bin\Debug\EntityFramework.dll
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\Server\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\Server\bin\Debug\EntityFramework.xml
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\Server\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\Server\obj\Debug\Server.csproj.Up2Date
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\Server\bin\Debug\Server.exe.config
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\Server\bin\Debug\Server.exe
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\Server\bin\Debug\Server.pdb
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\Server\bin\Debug\EntityFramework.dll
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\Server\bin\Debug\EntityFramework.SqlServer.dll
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\Server\bin\Debug\ProtocolSI.dll
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\Server\bin\Debug\EntityFramework.xml
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\Server\bin\Debug\EntityFramework.SqlServer.xml
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\Server\obj\Debug\Server.csproj.Up2Date
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\Server\obj\Debug\Server.exe
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\Server\obj\Debug\Server.pdb
