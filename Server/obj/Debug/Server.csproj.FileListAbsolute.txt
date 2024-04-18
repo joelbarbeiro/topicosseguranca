@@ -51,3 +51,15 @@ D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\Server\obj\Debug\S
 D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\Server\obj\Debug\Server.csproj.Up2Date
 D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\Server\obj\Debug\Server.exe
 D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\Server\obj\Debug\Server.pdb
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\Server\bin\Debug\Server.exe.config
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\Server\bin\Debug\Server.exe
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\Server\bin\Debug\Server.pdb
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\Server\bin\Debug\EntityFramework.dll
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\Server\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\Server\bin\Debug\EntityFramework.xml
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\Server\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\Server\obj\Debug\Server.csproj.Up2Date
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\Server\obj\Debug\Server.exe
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\Server\obj\Debug\Server.pdb

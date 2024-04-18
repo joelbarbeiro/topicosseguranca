@@ -75,3 +75,20 @@ D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\obj\Debug\Cli
 D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\obj\Debug\chat.exe
 D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\obj\Debug\chat.pdb
 D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\bin\Debug\ProtocolSI.dll
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\bin\Debug\chat.exe.config
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\bin\Debug\chat.exe
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\bin\Debug\chat.pdb
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\bin\Debug\EntityFramework.dll
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\bin\Debug\EntityFramework.xml
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\chat.FormChatLogin.resources
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\chat.FormChat.resources
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\chat.formChatRegister.resources
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\chat.Properties.Resources.resources
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\Client.csproj.Up2Date
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\chat.exe
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\chat.pdb

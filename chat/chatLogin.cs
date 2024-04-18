@@ -100,5 +100,19 @@ namespace chat
                 MessageBox.Show("Login failed. Please try again.");
             }
         }
+
+        private void buttonChatRegister_Click(object sender, EventArgs e)
+        {
+            formChatRegister chatRegisterForm = new formChatRegister();
+            chatRegisterForm.Show();
+            this.Hide();
+
+        }
+        private void buttonChatRegister_Click_1(object sender, EventArgs e)
+        {
+             formChatRegister formchatregister = new formChatRegister();
+             formchatregister.Show();
+             this.Hide();
+        }
     }
 }
