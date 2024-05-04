@@ -184,3 +184,10 @@ D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\obj\Debug\Client.c
 D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\obj\Debug\Client.csproj.Up2Date
 D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\obj\Debug\chat.exe
 D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\obj\Debug\chat.pdb
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\bin\Debug\EntityFramework.dll
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\bin\Debug\EntityFramework.xml
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\obj\Debug\chat.formChatRegister.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\obj\Debug\chat.Migrations.initialmigration.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\obj\Debug\Client.csproj.Up2Date

@@ -134,3 +134,10 @@ D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\Server\obj\Debug\Server
 D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\Server\obj\Debug\Server.csproj.Up2Date
 D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\Server\obj\Debug\Server.exe
 D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\Server\obj\Debug\Server.pdb
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\Server\bin\Debug\EntityFramework.dll
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\Server\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\Server\bin\Debug\EntityFramework.xml
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\Server\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\Server\obj\Debug\Server.Migrations.initial_server_migration.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\Server\obj\Debug\Server.csproj.GenerateResource.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\Server\obj\Debug\Server.csproj.Up2Date

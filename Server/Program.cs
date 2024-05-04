@@ -82,11 +82,15 @@ namespace Server
                             // CONTROLO DO LOGIN 
                             string[] login = protocolSI.GetStringFromData().Split('-');
                             Console.WriteLine(login[1] + ": " + login[2]);
-                            Client clientC = new Client(client, login[1]);
-                            Clients.Add(clientC);
-                            Console.WriteLine("cliet" + clientC + " " + login[1]);
                             ack = handleLogin(login);
                             networkStream.Write(ack, 0, ack.Length);
+                            if (authUser(login[1], login[2]))
+                            {
+                                Client clientC = new Client(client, login[1]);
+                                Clients.Add(clientC);
+                                ack = handleListUsers();
+                                BroadcastMessage(ack, "Scream");
+                            }
                             break;
                         case ProtocolSICmdType.USER_OPTION_2:
                             // CONTROLO DO REGISTER
@@ -100,7 +104,7 @@ namespace Server
                             string[] message = protocolSI.GetStringFromData().Split('-');
                             Console.WriteLine(message[1] + ": " + message[2]);
                             ack = handleMessage(message);
-                            BroadcastMessage(ack);
+                            BroadcastMessage(ack, message[1], message[2]);
                             break;
                         case ProtocolSICmdType.EOT:
                             //CONTROLO DO END OF TRANSMISSION
@@ -145,10 +149,6 @@ namespace Server
                 context.SaveChanges();
             }
         }
-
-
-
-
 
         private static bool checkLoggedIn(int id)
         {
@@ -241,20 +241,50 @@ namespace Server
         private static byte[] handleMessage(string[] _data)
         {
             Console.WriteLine("handle message -> " + _data[0] + _data[1] + _data[2]);
-            byte[] response = Encoding.UTF8.GetBytes(_data[0] + "-" + _data[1] + "-" + _data[2]);
+            byte[] response = Encoding.UTF8.GetBytes(_data[0] + "-" + _data[1] + "-" + _data[2] + "-" + _data[3]);
             return response;
         }
+
         //FUNÇÃO PARA MANDAR A MENSAGEM PARA TODOS OS CLIENTES
-        private static void BroadcastMessage(byte[] message)
+        private static void BroadcastMessage(byte[] message, string userI, string userO = null)
         {
-            foreach (TcpClient client in connectedClients)
+            if(userI == "Scream")
             {
-         
-                NetworkStream stream = client.GetStream();
-                stream.Write(message, 0, message.Length);
+                foreach (Client client in Clients)
+                {
+                    //Console.WriteLine("Message Broadcast -> "+client.user);
+                    NetworkStream stream = client.tcpClient.GetStream();
+                    stream.Write(message, 0, message.Length);
+                }
             }
+            else
+            {
+                foreach (Client client in Clients)
+                {
+                    if (userI == client.user || userO == client.user)
+                    {
+                        //Console.WriteLine("Message Broadcast -> "+client.user);
+                        NetworkStream stream = client.tcpClient.GetStream();
+                        stream.Write(message, 0, message.Length);
+                    }
+                }
+            }
+            
         }
 
+        private static byte[] handleListUsers()
+        {
+            string _user;
+            _user = "UserList";
+            foreach (Client client in Clients)
+            {
+                 _user += "-" + client.user;
+            }
+            Console.WriteLine(_user);
+            byte[] listUsers = Encoding.UTF8.GetBytes(_user);
+
+            return listUsers;
+        }
 
 
         // CODIGO PARA FUTURO LOG.TXT

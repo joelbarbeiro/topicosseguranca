@@ -77,14 +77,34 @@ namespace chat
                         int size;
                         size = netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
                         response = Encoding.UTF8.GetString(protocolSI.Buffer, 0, size).Split('-');
-                        if (response[0] == "Message")
-                        {
-                            MessageChat messageChat = new MessageChat(response[1], response[2]);
+                        switch (response[0]) {
+                            case "Message":
+                                MessageChat messageChat = new MessageChat(response[1], response[2], response[3]);
                             // FAZ UPDATE A LISTA DE MENSAGENS NA THREAD DA UI
                             Invoke((MethodInvoker)delegate {
                                 Messages.Add(messageChat);
                                 updateMessageList();
                             });
+                            break;
+                            case "UserList":
+                                List<string> UserList = new List<string>();
+                                foreach (string u in response)
+                                {
+                                    if(u != "UserList")
+                                    {
+                                        UserList.Add(u);
+                                    }
+                                    else
+                                    {
+                                        UserList.Add("Scream");
+                                    }
+                                }
+                                Invoke((MethodInvoker)delegate
+                                {
+                                    updateUserList(UserList);
+                                });
+                            break;
+     
                         }
                     }
                     Thread.Sleep(100); //ADICIONA UM TEMPO DE ESPERA 
@@ -98,7 +118,8 @@ namespace chat
         }
         private void buttonSendMessage_Click(object sender, EventArgs e)
         {
-            string msg = "Message-" + user + "-" + textBoxMessage.Text;
+            string type = listBoxUserList.SelectedItem.ToString();
+            string msg = "Message-" + type + "-" + user + "-" + textBoxMessage.Text;
             textBoxMessage.Clear();
             byte[] packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_3, msg);
             netStream.Write(packet, 0, packet.Length);
@@ -110,7 +131,11 @@ namespace chat
             listBoxMessage.DataSource = null;
             listBoxMessage.DataSource = Messages;
         }
-
+        private void updateUserList(List<String> UserList)
+        {
+            listBoxUserList.DataSource = null;
+            listBoxUserList.DataSource = UserList;
+        }
 
         private void CloseClient()
         {

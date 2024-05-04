@@ -11,6 +11,7 @@ namespace chat.models
     {
         [Key]
         public int MsgId { get; set; }
+        public string Type { get; set; }
         public string User { get; set; }
         public DateTime Data { get; set; }
         public string Messag { get; set; }
@@ -19,8 +20,9 @@ namespace chat.models
         {
         }
 
-        public MessageChat(string user, string messag)
+        public MessageChat(string type,string user, string messag)
         {
+            Type = type;
             User = user;
             Messag = messag;
             Data = DateTime.Now;
@@ -29,7 +31,7 @@ namespace chat.models
 
         public override string ToString()
         {
-            return Data.ToString("HH:mm:ss") + " - " + User + " - " + Messag;
+            return Data.ToString("HH:mm:ss") + " - " + Type + " - " + User + " - " + Messag;
         }
     }
 

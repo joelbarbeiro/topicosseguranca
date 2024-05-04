@@ -79,6 +79,7 @@
       <DependentUpon>chatRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="clientContext.cs" />
+    <Compile Include="CryptFunctions.cs" />
     <Compile Include="Migrations\202404271210327_initial migration.cs" />
     <Compile Include="Migrations\202404271210327_initial migration.Designer.cs">
       <DependentUpon>202404271210327_initial migration.cs</DependentUpon>
