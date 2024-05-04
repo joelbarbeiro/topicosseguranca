@@ -20,10 +20,11 @@ namespace Server.models
         {
         }
 
-        public Client(int client, TcpClient tcpClient, string user)
+        public Client(TcpClient tcpClient,string user)
         {
-            this.tcpClient = tcpClient;
             this.user = user;
+            this.tcpClient = tcpClient;
+           
         }
         public override string ToString()
         {

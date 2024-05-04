@@ -30,7 +30,7 @@ namespace Server
         {
             Users = new List<User>();
             Clients = new List<Client>();
-
+           
             connectedClients = new List<TcpClient>();
             //ESCREVER PARA CONSOLA
             Console.WriteLine("A iniciar o servidor...");
@@ -82,6 +82,9 @@ namespace Server
                             // CONTROLO DO LOGIN 
                             string[] login = protocolSI.GetStringFromData().Split('-');
                             Console.WriteLine(login[1] + ": " + login[2]);
+                            Client clientC = new Client(client, login[1]);
+                            Clients.Add(clientC);
+                            Console.WriteLine("cliet" + clientC + " " + login[1]);
                             ack = handleLogin(login);
                             networkStream.Write(ack, 0, ack.Length);
                             break;

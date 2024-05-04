@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "D:\\TESP\\2 semestre\\Topicos de seguran\u00E7a\\TSProjeto_FINAL\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|D:\\TESP\\2 semestre\\Topicos de seguran\u00E7a\\TSProjeto_FINAL\\chat\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|solutionrelative:chat\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|d:\\tesp\\2 semestre\\topicos de seguran\u00E7a\\tsprojeto_final\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|d:\\tesp\\2 semestre\\topicos de seguran\u00E7a\\tsprojeto_final\\server\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|D:\\TESP\\2 semestre\\Topicos de seguran\u00E7a\\TSProjeto_FINAL\\server\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|solutionrelative:server\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|d:\\tesp\\2 semestre\\topicos de seguran\u00E7a\\tsprojeto_final\\server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|D:\\TESP\\2 semestre\\Topicos de seguran\u00E7a\\TSProjeto_FINAL\\server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|solutionrelative:server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|D:\\TESP\\2 semestre\\Topicos de seguran\u00E7a\\TSProjeto_FINAL\\chat\\chatregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|solutionrelative:chat\\chatregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|D:\\TESP\\2 semestre\\Topicos de seguran\u00E7a\\TSProjeto_FINAL\\chat\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|solutionrelative:chat\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|D:\\TESP\\2 semestre\\Topicos de seguran\u00E7a\\TSProjeto_FINAL\\chat\\chatlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,24 +53,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 272,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Client.cs",
               "DocumentMoniker": "D:\\TESP\\2 semestre\\Topicos de seguran\u00E7a\\TSProjeto_FINAL\\Server\\models\\Client.cs",
               "RelativeDocumentMoniker": "Server\\models\\Client.cs",
               "ToolTip": "D:\\TESP\\2 semestre\\Topicos de seguran\u00E7a\\TSProjeto_FINAL\\Server\\models\\Client.cs",
               "RelativeToolTip": "Server\\models\\Client.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAdAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAABkAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-04T17:19:23.069Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\TESP\\2 semestre\\Topicos de seguran\u00E7a\\TSProjeto_FINAL\\Server\\models\\User.cs",
               "RelativeDocumentMoniker": "Server\\models\\User.cs",
@@ -78,8 +78,7 @@
               "RelativeToolTip": "Server\\models\\User.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T17:18:10.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-04T17:18:10.9Z"
             },
             {
               "$type": "Document",
@@ -91,18 +90,17 @@
               "RelativeToolTip": "chat\\chatLogin.cs",
               "ViewState": "AQIAAJ4AAAAAAAAAAAAjwKsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T22:36:32.055Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-27T22:36:32.055Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "chatClient.cs",
               "DocumentMoniker": "D:\\TESP\\2 semestre\\Topicos de seguran\u00E7a\\TSProjeto_FINAL\\chat\\chatClient.cs",
               "RelativeDocumentMoniker": "chat\\chatClient.cs",
               "ToolTip": "D:\\TESP\\2 semestre\\Topicos de seguran\u00E7a\\TSProjeto_FINAL\\chat\\chatClient.cs",
               "RelativeToolTip": "chat\\chatClient.cs",
-              "ViewState": "AQIAAIIAAAAAAAAAAAAWwJEAAAAJAAAA",
+              "ViewState": "AQIAAGcAAAAAAAAAAAAlwHoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-27T22:28:58.423Z",
               "EditorCaption": ""
@@ -117,8 +115,7 @@
               "RelativeToolTip": "chat\\Program.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAD4vyQAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T22:28:04.99Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-27T22:28:04.99Z"
             },
             {
               "$type": "Document",
@@ -141,12 +138,11 @@
               "ToolTip": "D:\\TESP\\2 semestre\\Topicos de seguran\u00E7a\\TSProjeto_FINAL\\chat\\chatLogin.cs [Design]",
               "RelativeToolTip": "chat\\chatLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T21:49:02.792Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-27T21:49:02.792Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "chatRegister.cs",
               "DocumentMoniker": "D:\\TESP\\2 semestre\\Topicos de seguran\u00E7a\\TSProjeto_FINAL\\chat\\chatRegister.cs",
               "RelativeDocumentMoniker": "chat\\chatRegister.cs",
@@ -154,8 +150,7 @@
               "RelativeToolTip": "chat\\chatRegister.cs",
               "ViewState": "AQIAAMoAAAAAAAAAAAAawJIAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T19:47:51.875Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-27T19:47:51.875Z"
             },
             {
               "$type": "Document",
@@ -166,8 +161,7 @@
               "ToolTip": "D:\\TESP\\2 semestre\\Topicos de seguran\u00E7a\\TSProjeto_FINAL\\chat\\chatRegister.cs [Design]",
               "RelativeToolTip": "chat\\chatRegister.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T19:44:50.539Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-27T19:44:50.539Z"
             },
             {
               "$type": "Document",
@@ -180,13 +174,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\TESP\\2 semestre\\Topicos de seguran\u00E7a\\TSProjeto_FINAL\\Server\\Program.cs",
               "RelativeDocumentMoniker": "Server\\Program.cs",
               "ToolTip": "D:\\TESP\\2 semestre\\Topicos de seguran\u00E7a\\TSProjeto_FINAL\\Server\\Program.cs",
               "RelativeToolTip": "Server\\Program.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAIA3wFQAAAA1AAAA",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAIwFYAAABSAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-27T16:48:37.968Z",
               "EditorCaption": ""
