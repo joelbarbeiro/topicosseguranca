@@ -12,23 +12,23 @@ namespace Server.models
     {
         [Key]
         public int Id { get; set; }
-        public TcpClient tcpClient { get; set; }
-        public string user { get; set; }
-        public string publicKey { get; set; }
+        public TcpClient TcpClient { get; set; }
+        public string User { get; set; }
+        public string PublicKey { get; set; }
 
         public Client()
         {
         }
 
-        public Client(TcpClient tcpClient,string user)
+        public Client(TcpClient tcpClient, string user, string publicKey)
         {
-            this.user = user;
-            this.tcpClient = tcpClient;
-           
+            this.User = user;
+            this.TcpClient = tcpClient;
+            this.PublicKey = publicKey;
         }
         public override string ToString()
         {
-            return user;
+            return User;
         }
     }
 }

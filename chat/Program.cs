@@ -17,9 +17,12 @@ namespace chat
     internal static class Program
     {
         private const int Port = 10000;
-        public static NetworkStream netStream;
-        public static TcpClient tcpClient;
-        public static ProtocolSI protocolSI;
+        private static NetworkStream netStream;
+        private static TcpClient tcpClient;
+        private static ProtocolSI protocolSI;
+        private static string pubKey = CryptFunctions.pubKeyGen();
+        private static string privKey = CryptFunctions.privKeyGen();
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -33,8 +36,9 @@ namespace chat
             tcpClient.Connect(endPoint);
             netStream = tcpClient.GetStream();
             protocolSI = new ProtocolSI();
+            RSACryptoServiceProvider rsa;
             FormChatLogin.ReceiveNetworkStream(netStream);
-            Application.Run(new FormChatLogin(tcpClient));
+            Application.Run(new FormChatLogin(tcpClient, pubKey, privKey));
         }
 
     }

@@ -25,40 +25,24 @@ namespace chat
         TcpClient tcpClient;
         ProtocolSI protocolSI;
         private string user;
+        public string pubKey;
+        public string privKey;
 
-        public FormChat(string userName, TcpClient tcpClient,NetworkStream netStream)
+        public FormChat(string userName, TcpClient tcpClient,NetworkStream netStream, string privKey, string pubKey)
         {
+            this.user = userName;
+            this.tcpClient = tcpClient;
+            this.privKey = privKey;
+            this.pubKey = pubKey;
+
             InitializeComponent();
             protocolSI = new ProtocolSI();
             Messages = new List<MessageChat>();
             user = userName;
             ReceiveNetworkStream(netStream);
             Handler();
-            if (tcpClient == null || !tcpClient.Connected)
-            {
-                //InitializeTcpClient();
-
-            }
         }
 
-        private void InitializeTcpClient()
-        {
-            try
-            {
-                IPEndPoint endPoint = new IPEndPoint(IPAddress.Loopback, Port);
-                tcpClient = TcpClientSingleton.GetInstance();
-                tcpClient.Connect(endPoint);
-                netStream = tcpClient.GetStream();
-                protocolSI = new ProtocolSI();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error connecting to server: " + ex.Message);
-            }
-        }
-   
-       
-        
         private void Handler()
         {
             Thread thread = new Thread(getMessages);
@@ -121,7 +105,7 @@ namespace chat
             string type = listBoxUserList.SelectedItem.ToString();
             string msg = "Message-" + type + "-" + user + "-" + textBoxMessage.Text;
             textBoxMessage.Clear();
-            byte[] packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_3, msg);
+            byte[] packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_4, msg);
             netStream.Write(packet, 0, packet.Length);
 
         }
@@ -150,7 +134,7 @@ namespace chat
         private void FormChat_FormClosing(object sender, FormClosingEventArgs e)
         {
             CloseClient();
-            FormChatLogin formchatlogin = new FormChatLogin(tcpClient);
+            FormChatLogin formchatlogin = new FormChatLogin(tcpClient, pubKey, privKey);
             formchatlogin.Close();
         }
 
@@ -161,7 +145,7 @@ namespace chat
 
         private void buttonChatLogout_Click(object sender, EventArgs e)
         {
-            FormChatLogin formchatlogin = new FormChatLogin(tcpClient);
+            FormChatLogin formchatlogin = new FormChatLogin(tcpClient, pubKey, privKey);
             formchatlogin.Show();
             this.Close();
 

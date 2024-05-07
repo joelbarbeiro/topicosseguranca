@@ -24,17 +24,20 @@ namespace chat
     {
         private const int Port = 10000;
         public static NetworkStream netStream;
+        private string privKey;
+        private string pubKey;
+
         TcpClient tcpClient;
         ProtocolSI protocolSI;
-        public formChatRegister(TcpClient tcpClient, NetworkStream netStream)
+        public formChatRegister(TcpClient tcpClient, NetworkStream netStream, string privKey, string pubKey)
         {
+            this.privKey = privKey;
+            this.pubKey = pubKey;
             InitializeComponent();
             protocolSI = new ProtocolSI();
-            if (tcpClient == null || !tcpClient.Connected)
-            {
-                //InitializeTcpClient();
-            }
+           
             ReceiveNetworkStream(netStream);
+            
         }
 
         private void InitializeTcpClient()
@@ -142,7 +145,7 @@ namespace chat
             if (response == "OK")
             {
                 MessageBox.Show("Register Sucessful");
-                FormChatLogin LoginForm = new FormChatLogin(tcpClient);
+                FormChatLogin LoginForm = new FormChatLogin(tcpClient, pubKey, privKey);
                 this.Close();
                 LoginForm.Show();
             }
@@ -155,7 +158,7 @@ namespace chat
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormChatLogin formchatlogin = new FormChatLogin(tcpClient);
+            FormChatLogin formchatlogin = new FormChatLogin(tcpClient, pubKey, privKey);
             formchatlogin.ShowDialog();
             this.Close();
         }
@@ -207,7 +210,7 @@ namespace chat
             }
 
             string msg = "Register-" + username + "-" + password + "-" + email;
-            byte[] packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_2, msg);
+            byte[] packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_3, msg);
             netStream.Write(packet, 0, packet.Length);
             size = netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
             response = Encoding.UTF8.GetString(protocolSI.Buffer, 0, size);

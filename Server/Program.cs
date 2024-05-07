@@ -24,14 +24,14 @@ namespace Server
     {
         private static List<User> Users;
         private static List<Client> Clients;
-        private static List<TcpClient> connectedClients;
         private const int Port = 10000;
+        
+
         static void Main(string[] args)
         {
             Users = new List<User>();
             Clients = new List<Client>();
            
-            connectedClients = new List<TcpClient>();
             //ESCREVER PARA CONSOLA
             Console.WriteLine("A iniciar o servidor...");
             //DECLARAÇÃO DE VARIAVEIS DE SISTEMA PARA IP E TCPLISTENER
@@ -69,9 +69,9 @@ namespace Server
 
             private void threadHandler()
             {
+                string pubKey = null;
                 NetworkStream networkStream = this.client.GetStream();
                 ProtocolSI protocolSI = new ProtocolSI();
-                connectedClients.Add(client);
                 while (protocolSI.GetCmdType() != ProtocolSICmdType.EOT)
                 {
                     networkStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
@@ -79,32 +79,46 @@ namespace Server
                     switch (protocolSI.GetCmdType())
                     {
                         case ProtocolSICmdType.USER_OPTION_1:
+                            // RECEBE A PUBLIC KEY
+                            pubKey = protocolSI.GetStringFromData();
+                            Console.WriteLine("PubKey -> " + pubKey);
+                            ack = Encoding.UTF8.GetBytes("Ok");
+                            networkStream.Write(ack, 0, ack.Length);
+                            break;
+                        case ProtocolSICmdType.USER_OPTION_2:
                             // CONTROLO DO LOGIN 
-                            string[] login = protocolSI.GetStringFromData().Split('-');
+                            string[] login = decryptText(protocolSI.GetStringFromData(), pubKey).Split('-');
                             Console.WriteLine(login[1] + ": " + login[2]);
                             ack = handleLogin(login);
                             networkStream.Write(ack, 0, ack.Length);
                             if (authUser(login[1], login[2]))
                             {
-                                Client clientC = new Client(client, login[1]);
+                                Client clientC = new Client(client, login[1], pubKey);
                                 Clients.Add(clientC);
                                 ack = handleListUsers();
                                 BroadcastMessage(ack, "Scream");
+                                createLog(login[0], login[1], "Success");
+                            }
+                            else
+                            {
+                                createLog(login[0], login[1], "Failed");
                             }
                             break;
-                        case ProtocolSICmdType.USER_OPTION_2:
+                        case ProtocolSICmdType.USER_OPTION_3:
                             // CONTROLO DO REGISTER
                             string[] register = protocolSI.GetStringFromData().Split('-');
                             Console.WriteLine(register[0] + ": " + register[1] + ": " + register[2] + ": " + register[3]);
                             ack = handleRegister(register);
                             networkStream.Write(ack, 0, ack.Length);
+                            createLog(register[0], register[1]);
                             break;
-                        case ProtocolSICmdType.USER_OPTION_3:
+                        case ProtocolSICmdType.USER_OPTION_4:
                             // CONTROLO DAS MENSAGENS
-                            string[] message = protocolSI.GetStringFromData().Split('-');
+                            string[] message = decryptText(protocolSI.GetStringFromData(), pubKey).Split('-');
                             Console.WriteLine(message[1] + ": " + message[2]);
                             ack = handleMessage(message);
                             BroadcastMessage(ack, message[1], message[2]);
+                            createLog(message[0], message[1], message[2]);
                             break;
                         case ProtocolSICmdType.EOT:
                             //CONTROLO DO END OF TRANSMISSION
@@ -117,6 +131,7 @@ namespace Server
                 }
                 networkStream.Close();
                 client.Close();
+                Thread.Sleep(100); //ADICIONA UM TEMPO DE ESPERA 
             }
         }
 
@@ -252,8 +267,7 @@ namespace Server
             {
                 foreach (Client client in Clients)
                 {
-                    //Console.WriteLine("Message Broadcast -> "+client.user);
-                    NetworkStream stream = client.tcpClient.GetStream();
+                    NetworkStream stream = client.TcpClient.GetStream();
                     stream.Write(message, 0, message.Length);
                 }
             }
@@ -261,10 +275,9 @@ namespace Server
             {
                 foreach (Client client in Clients)
                 {
-                    if (userI == client.user || userO == client.user)
+                    if (userI == client.User || userO == client.User)
                     {
-                        //Console.WriteLine("Message Broadcast -> "+client.user);
-                        NetworkStream stream = client.tcpClient.GetStream();
+                        NetworkStream stream = client.TcpClient.GetStream();
                         stream.Write(message, 0, message.Length);
                     }
                 }
@@ -278,7 +291,7 @@ namespace Server
             _user = "UserList";
             foreach (Client client in Clients)
             {
-                 _user += "-" + client.user;
+                 _user += "-" + client.User;
             }
             Console.WriteLine(_user);
             byte[] listUsers = Encoding.UTF8.GetBytes(_user);
@@ -286,44 +299,62 @@ namespace Server
             return listUsers;
         }
 
-
-        // CODIGO PARA FUTURO LOG.TXT
-        /*private static void readFileUsers()
-{
-    string path = @"../../userList.txt";
-    try
-    {
-        //query
-
-        string line;
-
-        FileStream fs = new FileStream(path, FileMode.Open);
-        StreamReader r = new StreamReader(fs, Encoding.UTF8);
-
-        while ((line = r.ReadLine()) != null)
+        public static byte[] encryptText(string text, string key)
         {
-            string[] userData = line.Split(';');
-
-            if (userData.Length == 2)
+            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
             {
-                User user = new User(userData[0], userData[1].Trim());
-                Users.Add(user);
+                rsa.FromXmlString(key);
+                Console.WriteLine(text);
+                byte[] plaintextBytes = Encoding.UTF8.GetBytes(text);
+                byte[] cypheredText = rsa.Encrypt(plaintextBytes, false);
+                Console.WriteLine(cypheredText);
+                return cypheredText;
+            }
+
+        }
+
+        public static string decryptText(string text, string key)
+        {
+            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
+            {
+                rsa.FromXmlString(key);
+                byte[] cryptedText = Convert.FromBase64String(text); 
+                cryptedText = rsa.Decrypt(cryptedText, false);
+                string plainText = Encoding.UTF8.GetString(cryptedText);
+                Console.WriteLine(plainText);
+                return plainText;
             }
         }
-        r.Close();
-        fs.Close();
 
-        foreach (User user in Users)
+        private static void createLog(string command, string user, string target = null)
         {
-            Console.WriteLine(user.ToString());
+            //string path = "log.txt"; //Caminho do ficheiro de log
+            string path = @"../../log.txt";
+            try
+            {
+                if (!File.Exists(path)) //Verificar se o ficheiro existe
+                {
+                    File.Create(path);
+                }
+                else
+                {
+                    File.WriteAllText(path, string.Empty);
+                }
+                //Abrir o ficheiro para escrita
+                using (StreamWriter logWriter = File.AppendText(path))
+                {
+                    logWriter.WriteLine(DateTime.Now + " -> " + command + " - " + user + " - " + target);
+                    logWriter.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                //Error Handler
+                using (StreamWriter logWriter = File.AppendText("log.txt"))
+                {
+                    logWriter.WriteLine("Error: " + ex);
+                }
+            }
         }
-
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine("Erro " + ex);
-    }
-}
-*/
     }
 }

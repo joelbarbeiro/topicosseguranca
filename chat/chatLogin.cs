@@ -26,43 +26,38 @@ namespace chat
         TcpClient tcpClient;
         ProtocolSI protocolSI;
         public string user;
+        public string pubKey;
+        public string privKey;
 
-        public FormChatLogin(TcpClient tcpClient)
+        public FormChatLogin(TcpClient tcpClient, string privKey, string pubKey)
         {
+            this.tcpClient = tcpClient;
+            this.privKey = privKey;
+            this.pubKey = pubKey;
             InitializeComponent();
             protocolSI = new ProtocolSI();
-            if (tcpClient == null || !tcpClient.Connected)
-            {
-                //InitializeTcpClient();
-            }
-        }
-
-        private void InitializeTcpClient()
-        {
-            try
-            {
-                IPEndPoint endPoint = new IPEndPoint(IPAddress.Loopback, Port);
-                tcpClient = TcpClientSingleton.GetInstance();
-                tcpClient.Connect(endPoint);
-                
-                protocolSI = new ProtocolSI();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error connecting to server: " + ex.Message);
-            }
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             string response;
             int size;
-            string msg ="Login-"+textBoxLoginUsername.Text +"-"+ textBoxLoginPassword.Text;  
+            string msg = pubKey;
             byte[] packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_1, msg);
             netStream.Write(packet, 0, packet.Length);
-            size=netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
-            response = Encoding.UTF8.GetString(protocolSI.Buffer, 0,size);
-            changeForm(response);
+            size = netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
+            response = Encoding.UTF8.GetString(protocolSI.Buffer, 0, size);
+            MessageBox.Show(msg);
+            if (response == "Ok")
+            {
+                msg = "Login-" + textBoxLoginUsername.Text + "-" + textBoxLoginPassword.Text;
+                msg = CryptFunctions.encryptText(msg, pubKey);
+                packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_2, msg);
+                netStream.Write(packet, 0, packet.Length);
+                size = netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
+                response = Encoding.UTF8.GetString(protocolSI.Buffer, 0, size);
+                changeForm(response);
+            }
         }
 
         private void textBoxLoginUsername_Enter(object sender, EventArgs e)
@@ -109,7 +104,7 @@ namespace chat
             if (response == "OK")
             {
                 user = textBoxLoginUsername.Text;
-                FormChat mainForm = new FormChat(user,tcpClient,netStream);
+                FormChat mainForm = new FormChat(user,tcpClient, netStream, privKey, pubKey);
                 FormChat.ReceiveNetworkStream(netStream);
                 mainForm.Show();
                 this.Hide();
@@ -123,7 +118,7 @@ namespace chat
         private void buttonChatRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
-            formChatRegister chatRegisterForm = new formChatRegister(tcpClient, netStream);       
+            formChatRegister chatRegisterForm = new formChatRegister(tcpClient, netStream, privKey, pubKey);       
             chatRegisterForm.ShowDialog();
         }
 

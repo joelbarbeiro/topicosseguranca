@@ -9,39 +9,45 @@ namespace chat
 {
     public static class CryptFunctions
     {
-        public static void keyGen()
+        public static string pubKeyGen()
         {
-            // Create a new RSA instance
             using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
             {
-                // Get the public and private key
-                string publicKey = rsa.ToXmlString(false); // false for public key
-                string privateKey = rsa.ToXmlString(true); // true for private key
-
-                // Output the keys
-                Console.WriteLine("Public Key:");
-                Console.WriteLine(publicKey);
-                Console.WriteLine();
-
-                Console.WriteLine("Private Key:");
-                Console.WriteLine(privateKey);
+                return rsa.ToXmlString(false);
             }
         }
-        public static byte[] encryptText(string text, RSACryptoServiceProvider rsa)
-        {
-            Console.WriteLine(text);
-            byte[] plaintextBytes = Encoding.UTF8.GetBytes(text);
-            byte[] cypheredText = rsa.Encrypt(plaintextBytes, false);
-            Console.WriteLine(cypheredText);
 
-            return cypheredText;
-        }
-        public static string decryptText(byte[] text, RSACryptoServiceProvider rsa)
+        public static string privKeyGen()
         {
-            byte[] cryptedText = rsa.Decrypt(text, false);
-            string plainText = Encoding.UTF8.GetString(cryptedText);
-            Console.WriteLine(plainText);
-            return plainText;
+            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
+            {
+                return rsa.ToXmlString(true);
+            }
+        }
+
+        public static string encryptText(string text, string key)
+        {
+            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
+            {
+                rsa.FromXmlString(key);
+                Console.WriteLine(text);
+                byte[] plaintextBytes = Encoding.UTF8.GetBytes(text);
+                byte[] cypheredText = rsa.Encrypt(plaintextBytes, false);
+                Console.WriteLine(cypheredText);
+                return Convert.ToBase64String(cypheredText);
+            }
+
+        }
+
+        public static string decryptText(byte[] text, string key)
+        {
+            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider()) {
+                rsa.FromXmlString(key);
+                byte[] cryptedText = rsa.Decrypt(text, false);
+                string plainText = Encoding.UTF8.GetString(cryptedText);
+                Console.WriteLine(plainText);
+                return plainText;
+            }
         }
     }
 }
