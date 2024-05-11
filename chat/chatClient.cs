@@ -104,6 +104,7 @@ namespace chat
         {
             string type = listBoxUserList.SelectedItem.ToString();
             string msg = "Message-" + type + "-" + user + "-" + textBoxMessage.Text;
+            msg = CryptFunctions.encryptText(msg, pubKey);
             textBoxMessage.Clear();
             byte[] packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_4, msg);
             netStream.Write(packet, 0, packet.Length);

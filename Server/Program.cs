@@ -85,18 +85,20 @@ namespace Server
                             ack = Encoding.UTF8.GetBytes("Ok");
                             networkStream.Write(ack, 0, ack.Length);
                             break;
+
                         case ProtocolSICmdType.USER_OPTION_2:
                             // CONTROLO DO LOGIN 
                             string[] login = decryptText(protocolSI.GetStringFromData(), pubKey).Split('-');
                             Console.WriteLine(login[1] + ": " + login[2]);
                             ack = handleLogin(login);
                             networkStream.Write(ack, 0, ack.Length);
+
                             if (authUser(login[1], login[2]))
                             {
                                 Client clientC = new Client(client, login[1], pubKey);
                                 Clients.Add(clientC);
-                                ack = handleListUsers();
-                                BroadcastMessage(ack, "Scream");
+                                string _ack = handleListUsers();
+                                BroadcastMessage(_ack, "Scream");
                                 createLog(login[0], login[1], "Success");
                             }
                             else
@@ -114,10 +116,11 @@ namespace Server
                             break;
                         case ProtocolSICmdType.USER_OPTION_4:
                             // CONTROLO DAS MENSAGENS
-                            string[] message = decryptText(protocolSI.GetStringFromData(), pubKey).Split('-');
+                            string msg = decryptText(protocolSI.GetStringFromData(), pubKey);
+                            string[] message = msg.Split('-');
                             Console.WriteLine(message[1] + ": " + message[2]);
-                            ack = handleMessage(message);
-                            BroadcastMessage(ack, message[1], message[2]);
+                            //ack = handleMessage(message);
+                            BroadcastMessage(handleMessage(message), message[1], message[2]);
                             createLog(message[0], message[1], message[2]);
                             break;
                         case ProtocolSICmdType.EOT:
@@ -253,22 +256,25 @@ namespace Server
             return response;
         }
         //FUNÇÃO PARA TRATAR A MENSAGEM
-        private static byte[] handleMessage(string[] _data)
+        private static string handleMessage(string[] _data)
         {
             Console.WriteLine("handle message -> " + _data[0] + _data[1] + _data[2]);
-            byte[] response = Encoding.UTF8.GetBytes(_data[0] + "-" + _data[1] + "-" + _data[2] + "-" + _data[3]);
+            //byte[] response = Encoding.UTF8.GetBytes(_data[0] + "-" + _data[1] + "-" + _data[2] + "-" + _data[3]);
+            string response = _data[0] + "-" + _data[1] + "-" + _data[2] + "-" + _data[3];
             return response;
         }
 
         //FUNÇÃO PARA MANDAR A MENSAGEM PARA TODOS OS CLIENTES
-        private static void BroadcastMessage(byte[] message, string userI, string userO = null)
+        private static void BroadcastMessage(string message, string userI, string userO = null)
         {
-            if(userI == "Scream")
+            if (userI == "Scream")
             {
                 foreach (Client client in Clients)
                 {
+                    byte[] sendMessage = Encoding.UTF8.GetBytes(encryptText(message, client.PublicKey));
+
                     NetworkStream stream = client.TcpClient.GetStream();
-                    stream.Write(message, 0, message.Length);
+                    stream.Write(sendMessage, 0, message.Length);
                 }
             }
             else
@@ -277,15 +283,16 @@ namespace Server
                 {
                     if (userI == client.User || userO == client.User)
                     {
+                        byte[] sendMessage = Encoding.UTF8.GetBytes(encryptText(message, client.PublicKey));
                         NetworkStream stream = client.TcpClient.GetStream();
-                        stream.Write(message, 0, message.Length);
+                        stream.Write(sendMessage, 0, message.Length);
                     }
                 }
             }
             
         }
 
-        private static byte[] handleListUsers()
+        private static string handleListUsers()
         {
             string _user;
             _user = "UserList";
@@ -294,12 +301,11 @@ namespace Server
                  _user += "-" + client.User;
             }
             Console.WriteLine(_user);
-            byte[] listUsers = Encoding.UTF8.GetBytes(_user);
 
-            return listUsers;
+            return _user;
         }
 
-        public static byte[] encryptText(string text, string key)
+        public static string encryptText(string text, string key)
         {
             using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
             {
@@ -308,7 +314,7 @@ namespace Server
                 byte[] plaintextBytes = Encoding.UTF8.GetBytes(text);
                 byte[] cypheredText = rsa.Encrypt(plaintextBytes, false);
                 Console.WriteLine(cypheredText);
-                return cypheredText;
+                return Convert.ToBase64String(cypheredText);
             }
 
         }
@@ -318,6 +324,7 @@ namespace Server
             using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
             {
                 rsa.FromXmlString(key);
+                Console.WriteLine("decrypt text ->"+text);
                 byte[] cryptedText = Convert.FromBase64String(text); 
                 cryptedText = rsa.Decrypt(cryptedText, false);
                 string plainText = Encoding.UTF8.GetString(cryptedText);
@@ -336,10 +343,7 @@ namespace Server
                 {
                     File.Create(path);
                 }
-                else
-                {
-                    File.WriteAllText(path, string.Empty);
-                }
+                
                 //Abrir o ficheiro para escrita
                 using (StreamWriter logWriter = File.AppendText(path))
                 {
