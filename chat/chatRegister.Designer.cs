@@ -150,8 +150,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formChatRegister";
             this.Text = "Chat Stream";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formChatRegister_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formChatRegister_FormClosed);
             this.Load += new System.EventHandler(this.chatRegister_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

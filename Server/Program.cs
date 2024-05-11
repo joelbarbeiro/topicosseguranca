@@ -119,7 +119,7 @@ namespace Server
                             string[] register = CryptControllers.decryptText(getRegister, pubKey).Split('-');
                             Console.WriteLine(register[0] + ": " + register[1] + ": " + register[2] + ": " + register[3]);
                             string response = HandleControllers.handleRegister(register);
-                            ack = CryptControllers.encryptText(ack, pubKey);
+                            ack = CryptControllers.encryptText(response, pubKey);
                             sendAck = Encoding.UTF8.GetBytes(ack);
                             networkStream.Write(sendAck, 0, ack.Length);
                             LogControllers.createLog(register[0], register[1]);
@@ -139,7 +139,7 @@ namespace Server
                             Console.WriteLine("Ending Thread from Client" + "{0}", clientID);
                             protocolSI.GetStringFromData();
                             sendAck = protocolSI.Make(ProtocolSICmdType.ACK);
-                            networkStream.Write(sendAck, 0, ack.Length);
+                            networkStream.Write(sendAck, 0, sendAck.Length);
                             break;
                     }
                 }

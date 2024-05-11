@@ -143,14 +143,9 @@ namespace chat
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormChatLogin formchatlogin = new FormChatLogin(tcpClient, pubKey, privKey);
-            formchatlogin.ShowDialog();
+            FormChatLogin LoginForm = new FormChatLogin(tcpClient, pubKey, privKey);
+            LoginForm.ShowDialog();
             this.Close();
-        }
-
-        private void formChatRegister_FormClosed(object sender, FormClosedEventArgs e)
-        {
-
         }
 
         private void buttonChatRegister_Click_1(object sender, EventArgs e)
@@ -206,11 +201,6 @@ namespace chat
             changeForm(plainText);
         }
 
-
-        private void formChatRegister_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-        }
         public static void ReceiveNetworkStream(NetworkStream Stream)
         {
             netStream = Stream;

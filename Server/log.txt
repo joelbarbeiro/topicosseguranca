@@ -101,3 +101,8 @@
 12/05/2024 00:10:11 -> Message - Scream - pedro
 12/05/2024 00:10:20 -> Message - joel - pedro
 12/05/2024 00:10:35 -> Message - Scream - pedro
+12/05/2024 00:48:35 -> Login - aeb - Success
+12/05/2024 00:48:43 -> Login - pedro - Success
+12/05/2024 00:48:52 -> Login - joel - Success
+12/05/2024 00:49:00 -> Message - Scream - joel
+12/05/2024 00:52:05 -> Login - aeb - Success

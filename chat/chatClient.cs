@@ -137,8 +137,6 @@ namespace chat
         private void FormChat_FormClosing(object sender, FormClosingEventArgs e)
         {
             CloseClient();
-            FormChatLogin formchatlogin = new FormChatLogin(tcpClient, pubKey, privKey);
-            formchatlogin.Close();
         }
 
         private void FormChat_Load(object sender, EventArgs e)
