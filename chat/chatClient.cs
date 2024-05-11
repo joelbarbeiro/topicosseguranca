@@ -28,7 +28,7 @@ namespace chat
         public string pubKey;
         public string privKey;
 
-        public FormChat(string userName, TcpClient tcpClient,NetworkStream netStream, string privKey, string pubKey)
+        public FormChat(string userName, TcpClient tcpClient, NetworkStream netStream, string privKey, string pubKey)
         {
             this.user = userName;
             this.tcpClient = tcpClient;
@@ -51,30 +51,32 @@ namespace chat
 
         private void getMessages()
         {
+
             while (true) // LOOP PARA LER MENSAGENS INFINITO
             {
                 try
                 {
                     if (netStream.DataAvailable) // VERIFICA SE TEM DATA DISPONIVEL
                     {
-                        string[] response;
-                        int size;
-                        size = netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
-                        response = Encoding.UTF8.GetString(protocolSI.Buffer, 0, size).Split('-');
-                        switch (response[0]) {
+                        int size = netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
+                        string response = Encoding.UTF8.GetString(protocolSI.Buffer, 0, size);
+                        string plainText = CryptFunctions.decryptText(response, pubKey);
+                        string[] argUser = plainText.Split('-');
+                        switch (argUser[0])
+                        {
                             case "Message":
-                                MessageChat messageChat = new MessageChat(response[1], response[2], response[3]);
-                            // FAZ UPDATE A LISTA DE MENSAGENS NA THREAD DA UI
-                            Invoke((MethodInvoker)delegate {
-                                Messages.Add(messageChat);
-                                updateMessageList();
-                            });
-                            break;
+                                MessageChat messageChat = new MessageChat(argUser[1], argUser[2], argUser[3]);
+                                // FAZ UPDATE A LISTA DE MENSAGENS NA THREAD DA UI
+                                Invoke((MethodInvoker)delegate {
+                                    Messages.Add(messageChat);
+                                    updateMessageList();
+                                });
+                                break;
                             case "UserList":
                                 List<string> UserList = new List<string>();
-                                foreach (string u in response)
+                                foreach (string u in argUser)
                                 {
-                                    if(u != "UserList")
+                                    if (u != "UserList")
                                     {
                                         UserList.Add(u);
                                     }
@@ -87,8 +89,8 @@ namespace chat
                                 {
                                     updateUserList(UserList);
                                 });
-                            break;
-     
+                                break;
+
                         }
                     }
                     Thread.Sleep(100); //ADICIONA UM TEMPO DE ESPERA 
@@ -96,7 +98,7 @@ namespace chat
                 catch (Exception ex)
                 {
                     Console.WriteLine("Exception: " + ex.Message);
-                    break; 
+                    break;
                 }
             }
         }
@@ -104,9 +106,9 @@ namespace chat
         {
             string type = listBoxUserList.SelectedItem.ToString();
             string msg = "Message-" + type + "-" + user + "-" + textBoxMessage.Text;
-            msg = CryptFunctions.encryptText(msg, pubKey);
+            string cryptedText = CryptFunctions.encryptText(msg, pubKey);
             textBoxMessage.Clear();
-            byte[] packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_4, msg);
+            byte[] packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_4, cryptedText);
             netStream.Write(packet, 0, packet.Length);
 
         }
@@ -154,7 +156,7 @@ namespace chat
 
         public static void ReceiveNetworkStream(NetworkStream Stream)
         {
-            netStream=Stream;
+            netStream = Stream;
         }
     }
 }

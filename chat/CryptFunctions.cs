@@ -4,24 +4,23 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace chat
 {
     public static class CryptFunctions
     {
-        public static string pubKeyGen()
+        public static void keyGen(out string pubKey, out string privKey)
         {
             using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
             {
-                return rsa.ToXmlString(false);
-            }
-        }
+                // Export the public key
+                RSAParameters publicKeyParams = rsa.ExportParameters(false); // false indicates exporting the public key
+                pubKey = rsa.ToXmlString(false); // Export to XML string
 
-        public static string privKeyGen()
-        {
-            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
-            {
-                return rsa.ToXmlString(true);
+                // Export the private key
+                RSAParameters privateKeyParams = rsa.ExportParameters(true); // true indicates exporting the private key
+                privKey = rsa.ToXmlString(true); // Export to XML string
             }
         }
 
@@ -32,22 +31,32 @@ namespace chat
                 rsa.FromXmlString(key);
                 Console.WriteLine(text);
                 byte[] plaintextBytes = Encoding.UTF8.GetBytes(text);
-                byte[] cypheredText = rsa.Encrypt(plaintextBytes, false);
-                Console.WriteLine(cypheredText);
+                byte[] cypheredText = rsa.Encrypt(plaintextBytes, RSAEncryptionPadding.Pkcs1);
                 return Convert.ToBase64String(cypheredText);
             }
 
         }
 
-        public static string decryptText(byte[] text, string key)
+        public static string decryptText(string text, string key)
         {
+            string plainText = null;
             using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider()) {
-                rsa.FromXmlString(key);
-                byte[] cryptedText = rsa.Decrypt(text, false);
-                string plainText = Encoding.UTF8.GetString(cryptedText);
-                Console.WriteLine(plainText);
-                return plainText;
+                try
+                {
+                    rsa.FromXmlString(key);
+                    byte[] cryptedText = Convert.FromBase64String(text);
+                    byte[] plainTextByte = rsa.Decrypt(cryptedText, RSAEncryptionPadding.Pkcs1);
+                    plainText = Encoding.UTF8.GetString(plainTextByte);
+                    return plainText;
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("DECRYPT " + ex);
+                    return null;
+                }
             }
         }
     }
+
 }
+

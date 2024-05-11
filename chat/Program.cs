@@ -20,8 +20,8 @@ namespace chat
         private static NetworkStream netStream;
         private static TcpClient tcpClient;
         private static ProtocolSI protocolSI;
-        private static string pubKey = CryptFunctions.pubKeyGen();
-        private static string privKey = CryptFunctions.privKeyGen();
+        private static string pubKey;
+        private static string privKey;
 
         /// <summary>
         /// The main entry point for the application.
@@ -32,11 +32,11 @@ namespace chat
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             IPEndPoint endPoint = new IPEndPoint(IPAddress.Loopback, Port);
+            CryptFunctions.keyGen(out pubKey, out privKey);
             tcpClient = TcpClientSingleton.GetInstance();
             tcpClient.Connect(endPoint);
             netStream = tcpClient.GetStream();
             protocolSI = new ProtocolSI();
-            RSACryptoServiceProvider rsa;
             FormChatLogin.ReceiveNetworkStream(netStream);
             Application.Run(new FormChatLogin(tcpClient, pubKey, privKey));
         }

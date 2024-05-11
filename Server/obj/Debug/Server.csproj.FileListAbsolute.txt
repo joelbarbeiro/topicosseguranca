@@ -141,3 +141,17 @@ C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\S
 C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\Server\obj\Debug\Server.Migrations.initial_server_migration.resources
 C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\Server\obj\Debug\Server.csproj.GenerateResource.cache
 C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\Server\obj\Debug\Server.csproj.Up2Date
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\Server\bin\Debug\Server.exe.config
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\Server\bin\Debug\Server.exe
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\Server\bin\Debug\Server.pdb
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\Server\bin\Debug\EntityFramework.dll
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\Server\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\Server\bin\Debug\EntityFramework.xml
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\Server\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\Server\obj\Debug\Server.Migrations.initial_server_migration.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\Server\obj\Debug\Server.csproj.GenerateResource.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\Server\obj\Debug\Server.csproj.Up2Date
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\Server\obj\Debug\Server.exe
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\Server\obj\Debug\Server.pdb

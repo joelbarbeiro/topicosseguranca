@@ -47,8 +47,10 @@ namespace chat
             netStream.Write(packet, 0, packet.Length);
             size = netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
             response = Encoding.UTF8.GetString(protocolSI.Buffer, 0, size);
-            MessageBox.Show(msg);
-            if (response == "Ok")
+            string plainText = CryptFunctions.decryptText(response, pubKey);
+
+
+            if (plainText == "Ok")
             {
                 msg = "Login-" + textBoxLoginUsername.Text + "-" + textBoxLoginPassword.Text;
                 msg = CryptFunctions.encryptText(msg, pubKey);
@@ -56,7 +58,9 @@ namespace chat
                 netStream.Write(packet, 0, packet.Length);
                 size = netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
                 response = Encoding.UTF8.GetString(protocolSI.Buffer, 0, size);
-                changeForm(response);
+                plainText = CryptFunctions.decryptText(response, pubKey);
+
+                changeForm(plainText);
             }
         }
 

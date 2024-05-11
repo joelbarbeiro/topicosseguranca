@@ -31,6 +31,7 @@ namespace chat
         ProtocolSI protocolSI;
         public formChatRegister(TcpClient tcpClient, NetworkStream netStream, string privKey, string pubKey)
         {
+            this.tcpClient = tcpClient;
             this.privKey = privKey;
             this.pubKey = pubKey;
             InitializeComponent();
@@ -40,22 +41,6 @@ namespace chat
             
         }
 
-        private void InitializeTcpClient()
-        {
-            try
-            {
-                MessageBox.Show("MERDA");
-                IPEndPoint endPoint = new IPEndPoint(IPAddress.Loopback, Port);
-                tcpClient = TcpClientSingleton.GetInstance();
-                tcpClient.Connect(endPoint);
-                netStream = tcpClient.GetStream();
-                protocolSI = new ProtocolSI();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error connecting to server: " + ex.Message);
-            }
-        }
         private void chatRegister_Load(object sender, EventArgs e)
         {
             labelErrorShower.Text = "";
@@ -210,11 +195,15 @@ namespace chat
             }
 
             string msg = "Register-" + username + "-" + password + "-" + email;
-            byte[] packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_3, msg);
+            string cryptedText = CryptFunctions.encryptText(msg, pubKey);
+            byte[] packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_3, cryptedText);
             netStream.Write(packet, 0, packet.Length);
+
             size = netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
             response = Encoding.UTF8.GetString(protocolSI.Buffer, 0, size);
-            changeForm(response);
+            string plainText = CryptFunctions.decryptText(response, pubKey);
+
+            changeForm(plainText);
         }
 
 
