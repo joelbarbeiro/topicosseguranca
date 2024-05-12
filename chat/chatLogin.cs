@@ -42,7 +42,7 @@ namespace chat
         {
             string response;
             int size;
-            string msg = pubKey;
+            string msg = CryptFunctions.AESEncrypt(pubKey);
             byte[] packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_1, msg);
             netStream.Write(packet, 0, packet.Length);
             size = netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
@@ -52,7 +52,7 @@ namespace chat
 
             if (plainText == "Ok")
             {
-                msg = "Login-" + textBoxLoginUsername.Text + "-" + textBoxLoginPassword.Text;
+                msg = "Login-" + textBoxLoginUsername.Text + "-" + CryptFunctions.genPassHash(textBoxLoginPassword.Text);
                 msg = CryptFunctions.encryptText(msg, pubKey);
                 packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_2, msg);
                 netStream.Write(packet, 0, packet.Length);
@@ -125,12 +125,6 @@ namespace chat
             formChatRegister chatRegisterForm = new formChatRegister(tcpClient, netStream, privKey, pubKey);       
             chatRegisterForm.ShowDialog();
         }
-
-        private void formChatRegister_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //Show();
-        }
-
 
         private void CloseClient()
         {

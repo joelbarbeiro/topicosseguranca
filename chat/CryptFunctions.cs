@@ -11,6 +11,17 @@ namespace chat
 {
     public static class CryptFunctions
     {
+        public static string genPassHash(string pass)
+        {
+            byte[] salt = new byte[] { 0, 1, 0, 8, 9, 2, 3, 5 };
+            Rfc2898DeriveBytes pwdGen = new Rfc2898DeriveBytes(pass, salt, 1000);
+
+            byte[] key = pwdGen.GetBytes(16);
+
+            string pass64 = Convert.ToBase64String(key);
+
+            return pass64;
+        }
         public static void keyGen(out string pubKey, out string privKey)
         {
             using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
@@ -41,7 +52,8 @@ namespace chat
         public static string decryptText(string text, string key)
         {
             string plainText = null;
-            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider()) {
+            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
+            {
                 try
                 {
                     rsa.FromXmlString(key);
@@ -50,7 +62,7 @@ namespace chat
                     plainText = Encoding.UTF8.GetString(plainTextByte);
                     return plainText;
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show("DECRYPT " + ex);
                     return null;
@@ -58,15 +70,14 @@ namespace chat
             }
         }
         // AES Encryption
-        public static byte[] AESEncrypt(string plainText)
+        public static string AESEncrypt(string plainText)
         {
-            byte[] encryptedBytes = null;
+            string encryptedText = null;
 
             using (Aes aesAlg = Aes.Create())
             {
                 aesAlg.Key = Encoding.UTF8.GetBytes("770A8A65DA156D24EE2A093277530142");
-                aesAlg.IV = Encoding.UTF8.GetBytes("F5502320F8429037B8DAEF761B189D12");
-
+                aesAlg.IV = Encoding.UTF8.GetBytes("F5502320F8429037");
                 ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
 
                 using (MemoryStream msEncrypt = new MemoryStream())
@@ -77,27 +88,29 @@ namespace chat
                         {
                             swEncrypt.Write(plainText);
                         }
-                        encryptedBytes = msEncrypt.ToArray();
                     }
+                    encryptedText = Convert.ToBase64String(msEncrypt.ToArray());
                 }
             }
 
-            return encryptedBytes;
+            return encryptedText;
         }
 
         // AES Decryption
-        public static string AESDecrypt(byte[] cipherText)
+        public static string AESDecrypt(string cipherText)
         {
             string plaintext = null;
 
+            byte[] cipherBytes = Convert.FromBase64String(cipherText);
+
             using (Aes aesAlg = Aes.Create())
             {
-                aesAlg.Key = Encoding.UTF8.GetBytes("0123456789abcdef0123456789abcdef");
-                aesAlg.IV = Encoding.UTF8.GetBytes("0123456789abcdef");
+                aesAlg.Key = Encoding.UTF8.GetBytes("770A8A65DA156D24EE2A093277530142");
+                aesAlg.IV = Encoding.UTF8.GetBytes("F5502320F8429037");
 
                 ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
 
-                using (MemoryStream msDecrypt = new MemoryStream(cipherText))
+                using (MemoryStream msDecrypt = new MemoryStream(cipherBytes))
                 {
                     using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
                     {
@@ -111,6 +124,7 @@ namespace chat
 
             return plaintext;
         }
+
     }
 
 }

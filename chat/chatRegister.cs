@@ -130,7 +130,7 @@ namespace chat
             if (response == "OK")
             {
                 MessageBox.Show("Register Sucessful");
-                FormChatLogin LoginForm = new FormChatLogin(tcpClient, pubKey, privKey);
+                FormChatLogin LoginForm = new FormChatLogin(tcpClient, privKey, pubKey);
                 this.Close();
                 LoginForm.Show();
             }
@@ -189,16 +189,26 @@ namespace chat
                 return;
             }
 
-            string msg = "Register-" + username + "-" + password + "-" + email;
-            string cryptedText = CryptFunctions.encryptText(msg, pubKey);
-            byte[] packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_3, cryptedText);
+            string msg = CryptFunctions.AESEncrypt(pubKey);
+            byte[] packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_1, msg);
             netStream.Write(packet, 0, packet.Length);
-
             size = netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
             response = Encoding.UTF8.GetString(protocolSI.Buffer, 0, size);
             string plainText = CryptFunctions.decryptText(response, pubKey);
 
-            changeForm(plainText);
+            if (plainText == "Ok")
+            {
+                msg = "Register-" + username + "-" + CryptFunctions.genPassHash(password) + "-" + email;
+                string cryptedText = CryptFunctions.encryptText(msg, pubKey);
+                packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_3, cryptedText);
+                netStream.Write(packet, 0, packet.Length);
+
+                size = netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
+                response = Encoding.UTF8.GetString(protocolSI.Buffer, 0, size);
+                plainText = CryptFunctions.decryptText(response, pubKey);
+
+                changeForm(plainText);
+            }
         }
 
         public static void ReceiveNetworkStream(NetworkStream Stream)

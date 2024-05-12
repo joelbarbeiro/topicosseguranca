@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
@@ -35,16 +36,15 @@ namespace Server.models
                 return plainText;
             }
         }
-
-        // AES Encryption
-        public static byte[] AESEncrypt(string plainText)
+        
+        public static string AESEncrypt(string plainText)
         {
-            byte[] encryptedBytes = null;
+            string encryptedText = null;
 
             using (Aes aesAlg = Aes.Create())
             {
-                aesAlg.Key = Encoding.UTF8.GetBytes("0123456789abcdef0123456789abcdef");
-                aesAlg.IV = Encoding.UTF8.GetBytes("0123456789abcdef");
+                aesAlg.Key = Encoding.UTF8.GetBytes("770A8A65DA156D24EE2A093277530142");
+                aesAlg.IV = Encoding.UTF8.GetBytes("F5502320F8429037");
 
                 ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
 
@@ -56,27 +56,28 @@ namespace Server.models
                         {
                             swEncrypt.Write(plainText);
                         }
-                        encryptedBytes = msEncrypt.ToArray();
                     }
+                    encryptedText = Convert.ToBase64String(msEncrypt.ToArray());
                 }
             }
 
-            return encryptedBytes;
+            return encryptedText;
         }
 
-        // AES Decryption
-        public static string AESDecrypt(byte[] cipherText)
+        public static string AESDecrypt(string cipherText)
         {
             string plaintext = null;
+
+            byte[] cipherBytes = Convert.FromBase64String(cipherText);
 
             using (Aes aesAlg = Aes.Create())
             {
                 aesAlg.Key = Encoding.UTF8.GetBytes("770A8A65DA156D24EE2A093277530142");
-                aesAlg.IV = Encoding.UTF8.GetBytes("F5502320F8429037B8DAEF761B189D12");
+                aesAlg.IV = Encoding.UTF8.GetBytes("F5502320F8429037");
 
                 ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
 
-                using (MemoryStream msDecrypt = new MemoryStream(cipherText))
+                using (MemoryStream msDecrypt = new MemoryStream(cipherBytes))
                 {
                     using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
                     {
@@ -90,5 +91,6 @@ namespace Server.models
 
             return plaintext;
         }
+
     }
 }

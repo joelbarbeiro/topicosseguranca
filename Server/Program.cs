@@ -81,12 +81,12 @@ namespace Server
                     {
                         case ProtocolSICmdType.USER_OPTION_1:
                             // RECEBE A PUBLIC KEY
-                            pubKey = protocolSI.GetStringFromData();
+                            pubKey = CryptControllers.AESDecrypt(protocolSI.GetStringFromData());
                             ack = CryptControllers.encryptText("Ok", pubKey);
                             sendAck = Encoding.UTF8.GetBytes(ack);
                             networkStream.Write(sendAck, 0, ack.Length);
+                            Console.WriteLine("Pubkey ->> " + pubKey);
                             break;
-
                         case ProtocolSICmdType.USER_OPTION_2:
                             // CONTROLO DO LOGIN 
                             string getLogin = protocolSI.GetStringFromData();
@@ -96,15 +96,11 @@ namespace Server
                             ack = CryptControllers.encryptText(val, pubKey);
                             sendAck = Encoding.UTF8.GetBytes(ack);
                             networkStream.Write(sendAck, 0, ack.Length);
-
                             if (ValidationControllers.authUser(login[1], login[2]))
                             {
                                 Client clientC = new Client(client, login[1], pubKey);
                                 Clients.Add(clientC);
-                                ack = HandleControllers.handleListUsers(); //12 bytes
-                                int size = ack.Length;
-                                Console.WriteLine("Size of byte stream: " + size + " bytes");
-
+                                ack = HandleControllers.handleListUsers();
                                 BroadcastMessage(ack, "Scream");
                                 LogControllers.createLog(login[0], login[1], "Success");
                             }
@@ -140,6 +136,9 @@ namespace Server
                             protocolSI.GetStringFromData();
                             sendAck = protocolSI.Make(ProtocolSICmdType.ACK);
                             networkStream.Write(sendAck, 0, sendAck.Length);
+                            HandleControllers.removeUserFromList(client);
+                            ack = HandleControllers.handleListUsers();
+                            BroadcastMessage(ack, "Scream");
                             break;
                     }
                 }

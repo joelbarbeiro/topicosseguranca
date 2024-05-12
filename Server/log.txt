@@ -106,3 +106,34 @@
 12/05/2024 00:48:52 -> Login - joel - Success
 12/05/2024 00:49:00 -> Message - Scream - joel
 12/05/2024 00:52:05 -> Login - aeb - Success
+12/05/2024 15:44:30 -> Login - aeb - Success
+12/05/2024 15:45:03 -> Login - pedro - Success
+12/05/2024 15:45:07 -> Message - Scream - pedro
+12/05/2024 15:45:14 -> Message - aeb - pedro
+12/05/2024 15:59:45 -> Register - aeb - 
+12/05/2024 16:02:21 -> Register - aeb - 
+12/05/2024 16:02:36 -> Register - joel - 
+12/05/2024 16:04:27 -> Login - aeb - Success
+12/05/2024 16:04:53 -> Register - pedro - 
+12/05/2024 16:05:00 -> Login - pedro - Success
+12/05/2024 16:10:04 -> Login - aeb - Success
+12/05/2024 16:44:27 -> Register - aeb - 
+12/05/2024 16:45:04 -> Register - aeb - 
+12/05/2024 16:46:01 -> Register - aeb - 
+12/05/2024 17:32:32 -> Register - aeb - 
+12/05/2024 17:34:04 -> Register - aeb - 
+12/05/2024 17:34:19 -> Register - joel - 
+12/05/2024 17:36:15 -> Register - aeb - 
+12/05/2024 17:36:27 -> Login - aeb - Success
+12/05/2024 17:43:11 -> Login - aeb - Success
+12/05/2024 17:43:43 -> Register - joel - 
+12/05/2024 17:43:51 -> Login - joel - Success
+12/05/2024 17:44:08 -> Register - pedro - 
+12/05/2024 17:44:17 -> Login - pedro - Success
+12/05/2024 17:49:06 -> Login - aeb - Failed
+12/05/2024 17:49:12 -> Login - aeb - Success
+12/05/2024 17:49:23 -> Login - pedro - Success
+12/05/2024 17:50:02 -> Login - aeb - Success
+12/05/2024 17:50:11 -> Login - pedro - Success
+12/05/2024 17:51:23 -> Login - aeb - Success
+12/05/2024 17:51:44 -> Login - pedro - Success

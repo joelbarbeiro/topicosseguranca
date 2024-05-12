@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-backup - Copy\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|c:\\users\\aeb\\documents\\tesp\\2\u00BA semestre\\topicos de seguranca\\topicosseguranca-backup - copy\\server\\models\\handlecontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|solutionrelative:server\\models\\handlecontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|c:\\users\\aeb\\documents\\tesp\\2\u00BA semestre\\topicos de seguranca\\topicosseguranca-backup - copy\\chat\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|solutionrelative:chat\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|c:\\users\\aeb\\documents\\tesp\\2\u00BA semestre\\topicos de seguranca\\topicosseguranca-backup - copy\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-backup - Copy\\chat\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|solutionrelative:chat\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|c:\\users\\aeb\\documents\\tesp\\2\u00BA semestre\\topicos de seguranca\\topicosseguranca-backup - copy\\chat\\chatlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|solutionrelative:chat\\chatlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|c:\\users\\aeb\\documents\\tesp\\2\u00BA semestre\\topicos de seguranca\\topicosseguranca-backup - copy\\server\\models\\validationcontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|solutionrelative:server\\models\\validationcontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|c:\\users\\aeb\\documents\\tesp\\2\u00BA semestre\\topicos de seguranca\\topicosseguranca-backup - copy\\server\\models\\cryptcontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|solutionrelative:server\\models\\cryptcontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|c:\\users\\aeb\\documents\\tesp\\2\u00BA semestre\\topicos de seguranca\\topicosseguranca-backup - copy\\chat\\cryptfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|solutionrelative:chat\\cryptfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,28 +46,100 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-backup - Copy\\Server\\Program.cs",
-              "RelativeDocumentMoniker": "Server\\Program.cs",
-              "ToolTip": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-backup - Copy\\Server\\Program.cs",
-              "RelativeToolTip": "Server\\Program.cs",
-              "ViewState": "AQIAAFwAAAAAAAAAAAAiwI0AAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T23:08:59.726Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "chatClient.cs",
               "DocumentMoniker": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-backup - Copy\\chat\\chatClient.cs",
               "RelativeDocumentMoniker": "chat\\chatClient.cs",
               "ToolTip": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-backup - Copy\\chat\\chatClient.cs",
               "RelativeToolTip": "chat\\chatClient.cs",
-              "ViewState": "AQIAAHYAAAAAAAAAAAAswIoAAAAaAAAA",
+              "ViewState": "AQIAADsAAAAAAAAAAAAwwFwAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T15:27:26.401Z"
+              "WhenOpened": "2024-05-12T16:42:37.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ValidationControllers.cs",
+              "DocumentMoniker": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-backup - Copy\\Server\\models\\ValidationControllers.cs",
+              "RelativeDocumentMoniker": "Server\\models\\ValidationControllers.cs",
+              "ToolTip": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-backup - Copy\\Server\\models\\ValidationControllers.cs",
+              "RelativeToolTip": "Server\\models\\ValidationControllers.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACYAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T15:13:18.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-backup - Copy\\Server\\Program.cs",
+              "RelativeDocumentMoniker": "Server\\Program.cs",
+              "ToolTip": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-backup - Copy\\Server\\Program.cs",
+              "RelativeToolTip": "Server\\Program.cs",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAcwJMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T23:08:59.726Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 272,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HandleControllers.cs",
+              "DocumentMoniker": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-backup - Copy\\Server\\models\\HandleControllers.cs",
+              "RelativeDocumentMoniker": "Server\\models\\HandleControllers.cs",
+              "ToolTip": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-backup - Copy\\Server\\models\\HandleControllers.cs",
+              "RelativeToolTip": "Server\\models\\HandleControllers.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAADwv2UAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T16:38:55.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "chatLogin.cs",
+              "DocumentMoniker": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-backup - Copy\\chat\\chatLogin.cs",
+              "RelativeDocumentMoniker": "chat\\chatLogin.cs",
+              "ToolTip": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-backup - Copy\\chat\\chatLogin.cs",
+              "RelativeToolTip": "chat\\chatLogin.cs",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAAwIEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T14:36:06.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CryptControllers.cs",
+              "DocumentMoniker": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-backup - Copy\\Server\\models\\CryptControllers.cs",
+              "RelativeDocumentMoniker": "Server\\models\\CryptControllers.cs",
+              "ToolTip": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-backup - Copy\\Server\\models\\CryptControllers.cs",
+              "RelativeToolTip": "Server\\models\\CryptControllers.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAwwCYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T14:40:20.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CryptFunctions.cs",
+              "DocumentMoniker": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-backup - Copy\\chat\\CryptFunctions.cs",
+              "RelativeDocumentMoniker": "chat\\CryptFunctions.cs",
+              "ToolTip": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-backup - Copy\\chat\\CryptFunctions.cs",
+              "RelativeToolTip": "chat\\CryptFunctions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T14:36:22.057Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
@@ -94,6 +95,10 @@ namespace Server.models
                 }
             }
             return null;
+        }
+        public static void removeUserFromList(TcpClient client)
+        {
+            Program.Clients.RemoveAll(user => user.TcpClient == client);
         }
     }
 }

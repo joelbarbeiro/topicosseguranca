@@ -90,7 +90,6 @@ namespace chat
                                     updateUserList(UserList);
                                 });
                                 break;
-
                         }
                     }
                     Thread.Sleep(100); //ADICIONA UM TEMPO DE ESPERA 
@@ -122,21 +121,6 @@ namespace chat
         {
             listBoxUserList.DataSource = null;
             listBoxUserList.DataSource = UserList;
-        }
-
-        private void CloseClient()
-        {
-            byte[] eot = protocolSI.Make(ProtocolSICmdType.EOT);
-            netStream.Write(eot, 0, eot.Length);
-            netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
-            netStream.Close();
-            tcpClient.Close();
-        }
-
-
-        private void FormChat_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            CloseClient();
         }
 
         private void FormChat_Load(object sender, EventArgs e)

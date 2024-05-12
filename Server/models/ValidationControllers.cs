@@ -30,28 +30,36 @@ namespace Server.models
         {
             serverContext context = new serverContext();
 
-            //ENTITY FRAMEWORK
-            var query_result_alt = context.Users.Where(
-             User =>
-             User.user == user &&
-             User.email == email);
-
-            if (query_result_alt.Count() == 0)
+            if (context.Users.Count() > 0)
             {
-                Console.WriteLine("Register Successful");
+                //ENTITY FRAMEWORK
+                var query_result = context.Users.Where(
+                User =>
+                User.user == user &&
+                User.email == email);
+
+
+                if (query_result.Count() == 0)
+                {
+                    Console.WriteLine("Register Successful");
+                    return true;
+                }
+                Console.WriteLine("Register Failed");
+                return false;
+            }
+            else
+            {
                 return true;
             }
-            Console.WriteLine("Register Failed");
-            return false;
 
         }
         public static bool checkLoggedIn(int id)
         {
             serverContext context = new serverContext();
-            var query_result_alt = context.Users.Where(
+            var query_result = context.Users.Where(
             User =>
             User.IdUser == id && User.isLoggedIn == true);
-            if (query_result_alt.Count() == 0)
+            if (query_result.Count() == 0)
             {
                 Console.WriteLine("Login Failed");
                 return false;
