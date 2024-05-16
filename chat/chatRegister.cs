@@ -26,14 +26,17 @@ namespace chat
         public static NetworkStream netStream;
         private string privKey;
         private string pubKey;
+        private string serverPubKey;
 
         TcpClient tcpClient;
         ProtocolSI protocolSI;
-        public formChatRegister(TcpClient tcpClient, NetworkStream netStream, string privKey, string pubKey)
+        public formChatRegister(TcpClient tcpClient, NetworkStream netStream, string privKey, string pubKey, string serverPubKey)
         {
             this.tcpClient = tcpClient;
             this.privKey = privKey;
             this.pubKey = pubKey;
+            this.serverPubKey = serverPubKey;
+
             InitializeComponent();
             protocolSI = new ProtocolSI();
            
@@ -130,7 +133,7 @@ namespace chat
             if (response == "OK")
             {
                 MessageBox.Show("Register Sucessful");
-                FormChatLogin LoginForm = new FormChatLogin(tcpClient, privKey, pubKey);
+                FormChatLogin LoginForm = new FormChatLogin(tcpClient, privKey, pubKey, serverPubKey);
                 this.Close();
                 LoginForm.Show();
             }
@@ -143,7 +146,7 @@ namespace chat
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormChatLogin LoginForm = new FormChatLogin(tcpClient, pubKey, privKey);
+            FormChatLogin LoginForm = new FormChatLogin(tcpClient, pubKey, privKey, serverPubKey);
             LoginForm.ShowDialog();
             this.Close();
         }
@@ -194,18 +197,20 @@ namespace chat
             netStream.Write(packet, 0, packet.Length);
             size = netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
             response = Encoding.UTF8.GetString(protocolSI.Buffer, 0, size);
-            string plainText = CryptFunctions.decryptText(response, pubKey);
+            string plainText = CryptFunctions.AESDecrypt(response);
+            string[] getServerStat = plainText.Split('-');
 
-            if (plainText == "Ok")
+            if (getServerStat[0] == "Ok")
             {
+                serverPubKey = getServerStat[1];
                 msg = "Register-" + username + "-" + CryptFunctions.genPassHash(password) + "-" + email;
-                string cryptedText = CryptFunctions.encryptText(msg, pubKey);
+                string cryptedText = CryptFunctions.encryptText(msg, serverPubKey);
                 packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_3, cryptedText);
                 netStream.Write(packet, 0, packet.Length);
 
                 size = netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
                 response = Encoding.UTF8.GetString(protocolSI.Buffer, 0, size);
-                plainText = CryptFunctions.decryptText(response, pubKey);
+                plainText = CryptFunctions.decryptText(response, privKey);
 
                 changeForm(plainText);
             }

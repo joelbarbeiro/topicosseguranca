@@ -137,3 +137,15 @@
 12/05/2024 17:50:11 -> Login - pedro - Success
 12/05/2024 17:51:23 -> Login - aeb - Success
 12/05/2024 17:51:44 -> Login - pedro - Success
+16/05/2024 01:32:29 -> Login - aeb - Success
+16/05/2024 01:33:12 -> Login - aeb - Success
+16/05/2024 01:44:11 -> Register - teste - 
+16/05/2024 01:44:19 -> Login - teste - Success
+16/05/2024 01:44:25 -> Message - Scream - teste
+16/05/2024 01:44:31 -> Message - teste - teste
+16/05/2024 01:44:36 -> Message - teste - teste
+16/05/2024 01:48:27 -> Login - aeb - Success
+16/05/2024 01:48:46 -> Login - teste - Success
+16/05/2024 01:48:50 -> Message - Scream - teste
+16/05/2024 01:48:54 -> Message - Scream - teste
+16/05/2024 01:48:57 -> Message - aeb - teste

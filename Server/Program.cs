@@ -25,18 +25,22 @@ namespace Server
         private static List<User> Users;
         public static List<Client> Clients;
         private const int Port = 10000;
-
+        private static string pubKey;
+        private static string privKey;
 
         static void Main(string[] args)
         {
             Users = new List<User>();
             Clients = new List<Client>();
 
+            
+
             //ESCREVER PARA CONSOLA
             Console.WriteLine("A iniciar o servidor...");
             //DECLARAÇÃO DE VARIAVEIS DE SISTEMA PARA IP E TCPLISTENER
             IPEndPoint endPoint = new IPEndPoint(IPAddress.Any, Port);
             TcpListener listener = new TcpListener(endPoint);
+            CryptControllers.keyGen(out pubKey, out privKey);
             listener.Start();
             Console.WriteLine("SERVER READY!");
             int clientCounter = 0;
@@ -69,7 +73,7 @@ namespace Server
 
             private void threadHandler()
             {
-                string pubKey = null;
+                string clientPubKey = null;
                 NetworkStream networkStream = this.client.GetStream();
                 ProtocolSI protocolSI = new ProtocolSI();
                 while (protocolSI.GetCmdType() != ProtocolSICmdType.EOT)
@@ -81,24 +85,23 @@ namespace Server
                     {
                         case ProtocolSICmdType.USER_OPTION_1:
                             // RECEBE A PUBLIC KEY
-                            pubKey = CryptControllers.AESDecrypt(protocolSI.GetStringFromData());
-                            ack = CryptControllers.encryptText("Ok", pubKey);
+                            clientPubKey = CryptControllers.AESDecrypt(protocolSI.GetStringFromData());
+                            ack = CryptControllers.AESEncrypt("Ok-"+Program.pubKey);
                             sendAck = Encoding.UTF8.GetBytes(ack);
-                            networkStream.Write(sendAck, 0, ack.Length);
-                            Console.WriteLine("Pubkey ->> " + pubKey);
+                            networkStream.Write(sendAck, 0, sendAck.Length);
                             break;
                         case ProtocolSICmdType.USER_OPTION_2:
                             // CONTROLO DO LOGIN 
+                            Console.WriteLine(clientPubKey);
                             string getLogin = protocolSI.GetStringFromData();
-                            string[] login = CryptControllers.decryptText(getLogin, pubKey).Split('-');
-                            Console.WriteLine(login[1] + ": " + login[2] + "LOGIN!!");
+                            string[] login = CryptControllers.decryptText(getLogin, privKey).Split('-');
                             string val = HandleControllers.handleLogin(login);
-                            ack = CryptControllers.encryptText(val, pubKey);
+                            ack = CryptControllers.encryptText(val, clientPubKey);
                             sendAck = Encoding.UTF8.GetBytes(ack);
-                            networkStream.Write(sendAck, 0, ack.Length);
+                            networkStream.Write(sendAck, 0, sendAck.Length);
                             if (ValidationControllers.authUser(login[1], login[2]))
                             {
-                                Client clientC = new Client(client, login[1], pubKey);
+                                Client clientC = new Client(client, login[1], clientPubKey);
                                 Clients.Add(clientC);
                                 ack = HandleControllers.handleListUsers();
                                 BroadcastMessage(ack, "Scream");
@@ -112,21 +115,18 @@ namespace Server
                         case ProtocolSICmdType.USER_OPTION_3:
                             // CONTROLO DO REGISTER
                             string getRegister = protocolSI.GetStringFromData();
-                            string[] register = CryptControllers.decryptText(getRegister, pubKey).Split('-');
-                            Console.WriteLine(register[0] + ": " + register[1] + ": " + register[2] + ": " + register[3]);
+                            string[] register = CryptControllers.decryptText(getRegister, privKey).Split('-');
                             string response = HandleControllers.handleRegister(register);
-                            ack = CryptControllers.encryptText(response, pubKey);
+                            ack = CryptControllers.encryptText(response, clientPubKey);
                             sendAck = Encoding.UTF8.GetBytes(ack);
-                            networkStream.Write(sendAck, 0, ack.Length);
+                            networkStream.Write(sendAck, 0, sendAck.Length);
                             LogControllers.createLog(register[0], register[1]);
                             break;
                         case ProtocolSICmdType.USER_OPTION_4:
                             // CONTROLO DAS MENSAGENS
                             string userKey = HandleControllers.getKeyFromList(client);
-                            string msg = CryptControllers.decryptText(protocolSI.GetStringFromData(), userKey);
+                            string msg = CryptControllers.decryptText(protocolSI.GetStringFromData(), privKey);
                             string[] message = msg.Split('-');
-                            Console.WriteLine(message[1] + ": " + message[2] + "MESSAGEUO4");
-                            //ack = handleMessage(message);
                             BroadcastMessage(HandleControllers.handleMessage(message), message[1], message[2]);
                             LogControllers.createLog(message[0], message[1], message[2]);
                             break;

@@ -27,13 +27,15 @@ namespace chat
         private string user;
         public string pubKey;
         public string privKey;
+        public string serverPubKey;
 
-        public FormChat(string userName, TcpClient tcpClient, NetworkStream netStream, string privKey, string pubKey)
+        public FormChat(string userName, TcpClient tcpClient, NetworkStream netStream, string privKey, string pubKey, string serverPubKey)
         {
             this.user = userName;
             this.tcpClient = tcpClient;
             this.privKey = privKey;
             this.pubKey = pubKey;
+            this.serverPubKey = serverPubKey;
 
             InitializeComponent();
             protocolSI = new ProtocolSI();
@@ -60,7 +62,7 @@ namespace chat
                     {
                         int size = netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
                         string response = Encoding.UTF8.GetString(protocolSI.Buffer, 0, size);
-                        string plainText = CryptFunctions.decryptText(response, pubKey);
+                        string plainText = CryptFunctions.decryptText(response, privKey);
                         string[] argUser = plainText.Split('-');
                         switch (argUser[0])
                         {
@@ -105,7 +107,7 @@ namespace chat
         {
             string type = listBoxUserList.SelectedItem.ToString();
             string msg = "Message-" + type + "-" + user + "-" + textBoxMessage.Text;
-            string cryptedText = CryptFunctions.encryptText(msg, pubKey);
+            string cryptedText = CryptFunctions.encryptText(msg, serverPubKey);
             textBoxMessage.Clear();
             byte[] packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_4, cryptedText);
             netStream.Write(packet, 0, packet.Length);
@@ -130,7 +132,7 @@ namespace chat
 
         private void buttonChatLogout_Click(object sender, EventArgs e)
         {
-            FormChatLogin formchatlogin = new FormChatLogin(tcpClient, pubKey, privKey);
+            FormChatLogin formchatlogin = new FormChatLogin(tcpClient, pubKey, privKey, serverPubKey);
             formchatlogin.Show();
             this.Close();
 

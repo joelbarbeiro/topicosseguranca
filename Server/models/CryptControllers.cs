@@ -11,15 +11,30 @@ namespace Server.models
 {
     public class CryptControllers
     {
+        public static void keyGen(out string pubKey, out string privKey)
+        {
+            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
+            {
+                RSAParameters privateKeyParams = rsa.ExportParameters(true);
+                privKey = rsa.ToXmlString(true);
+
+                RSAParameters publicKeyParams = rsa.ExportParameters(false);
+                pubKey = rsa.ToXmlString(false);
+
+                rsa.PersistKeyInCsp = false;
+            }
+
+        }
         public static string encryptText(string text, string key)
         {
             using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
             {
                 rsa.FromXmlString(key);
-                Console.WriteLine("Palin text to encrypt --> " + text);
-                byte[] plaintextBytes = Encoding.UTF8.GetBytes(text);
-                byte[] cypheredText = rsa.Encrypt(plaintextBytes, RSAEncryptionPadding.Pkcs1);
-                Console.WriteLine(cypheredText);
+                byte[] plainTextBytes = Encoding.UTF8.GetBytes(text);
+                byte[] cypheredText = rsa.Encrypt(plainTextBytes, true);
+
+                rsa.PersistKeyInCsp = false;
+
                 return Convert.ToBase64String(cypheredText);
             }
         }
@@ -28,12 +43,22 @@ namespace Server.models
         {
             using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
             {
-                rsa.FromXmlString(key);
-                byte[] cryptedText = Convert.FromBase64String(text);
-                cryptedText = rsa.Decrypt(cryptedText, RSAEncryptionPadding.Pkcs1);
-                string plainText = Encoding.UTF8.GetString(cryptedText);
-                Console.WriteLine(plainText + "DECRYPT");
-                return plainText;
+                try
+                {
+                    rsa.FromXmlString(key);
+                    byte[] cryptedText = Convert.FromBase64String(text);
+                    byte[] plainTextByte = rsa.Decrypt(cryptedText, true);
+                    string plainText = Encoding.UTF8.GetString(plainTextByte);
+
+                    rsa.PersistKeyInCsp = false;
+
+                    return plainText;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("DECRYPT " + ex.Message);
+                    return null;
+                }
             }
         }
         

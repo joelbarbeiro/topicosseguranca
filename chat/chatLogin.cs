@@ -28,12 +28,15 @@ namespace chat
         public string user;
         public string pubKey;
         public string privKey;
+        public string serverPubKey;
 
-        public FormChatLogin(TcpClient tcpClient, string privKey, string pubKey)
+
+        public FormChatLogin(TcpClient tcpClient, string privKey, string pubKey, string serverPubKey)
         {
             this.tcpClient = tcpClient;
             this.privKey = privKey;
             this.pubKey = pubKey;
+            this.serverPubKey = serverPubKey;
             InitializeComponent();
             protocolSI = new ProtocolSI();
         }
@@ -47,18 +50,21 @@ namespace chat
             netStream.Write(packet, 0, packet.Length);
             size = netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
             response = Encoding.UTF8.GetString(protocolSI.Buffer, 0, size);
-            string plainText = CryptFunctions.decryptText(response, pubKey);
+            string plainText = CryptFunctions.AESDecrypt(response);
+            string[] getServerStat = plainText.Split('-');
 
-
-            if (plainText == "Ok")
+            if (getServerStat[0] == "Ok")
             {
-                msg = "Login-" + textBoxLoginUsername.Text + "-" + CryptFunctions.genPassHash(textBoxLoginPassword.Text);
-                msg = CryptFunctions.encryptText(msg, pubKey);
+                serverPubKey = getServerStat[1];
+                Console.WriteLine(serverPubKey);
+                plainText = "Login-" + textBoxLoginUsername.Text + "-" + CryptFunctions.genPassHash(textBoxLoginPassword.Text);
+                msg = CryptFunctions.encryptText(plainText, serverPubKey);
+                Console.WriteLine(msg);
                 packet = protocolSI.Make(ProtocolSICmdType.USER_OPTION_2, msg);
                 netStream.Write(packet, 0, packet.Length);
                 size = netStream.Read(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
                 response = Encoding.UTF8.GetString(protocolSI.Buffer, 0, size);
-                plainText = CryptFunctions.decryptText(response, pubKey);
+                plainText = CryptFunctions.decryptText(response, privKey);
 
                 changeForm(plainText);
             }
@@ -108,7 +114,7 @@ namespace chat
             if (response == "OK")
             {
                 user = textBoxLoginUsername.Text;
-                FormChat mainForm = new FormChat(user,tcpClient, netStream, privKey, pubKey);
+                FormChat mainForm = new FormChat(user,tcpClient, netStream, privKey, pubKey, serverPubKey);
                 FormChat.ReceiveNetworkStream(netStream);
                 mainForm.Show();
                 this.Hide();
@@ -122,7 +128,7 @@ namespace chat
         private void buttonChatRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
-            formChatRegister chatRegisterForm = new formChatRegister(tcpClient, netStream, privKey, pubKey);       
+            formChatRegister chatRegisterForm = new formChatRegister(tcpClient, netStream, privKey, pubKey, serverPubKey);       
             chatRegisterForm.ShowDialog();
         }
 

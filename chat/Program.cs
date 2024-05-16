@@ -22,6 +22,7 @@ namespace chat
         private static ProtocolSI protocolSI;
         private static string pubKey;
         private static string privKey;
+        private static string serverPubKey = null;
 
         /// <summary>
         /// The main entry point for the application.
@@ -38,8 +39,10 @@ namespace chat
             netStream = tcpClient.GetStream();
             protocolSI = new ProtocolSI();
             FormChatLogin.ReceiveNetworkStream(netStream);
-            Application.Run(new FormChatLogin(tcpClient, pubKey, privKey));
+            Application.Run(new FormChatLogin(tcpClient, privKey, pubKey, serverPubKey));
         }
+
+        
 
     }
 }
