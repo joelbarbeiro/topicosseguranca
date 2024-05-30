@@ -1,0 +1,229 @@
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\chat\chat\chat\bin\Debug\chat.exe.config
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\chat\chat\chat\bin\Debug\chat.exe
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\chat\chat\chat\bin\Debug\chat.pdb
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\chat\chat\chat\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\chat\chat\chat\obj\Debug\chat.FormChatLogin.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\chat\chat\chat\obj\Debug\chat.FormChat.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\chat\chat\chat\obj\Debug\chat.Properties.Resources.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\chat\chat\chat\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\chat\chat\chat\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\chat\chat\chat\obj\Debug\chat.exe
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\chat\chat\chat\obj\Debug\chat.pdb
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\obj\Debug\chat.FormChatLogin.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\obj\Debug\chat.FormChat.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\obj\Debug\chat.Properties.Resources.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\obj\Debug\chat.exe
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\obj\Debug\chat.pdb
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\bin\Debug\chat.exe.config
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\bin\Debug\chat.exe
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\bin\Debug\chat.pdb
+G:\Shared drives\Trabalhos de Grupo\2º Semestre\Tópicos de Segurança\topicosseguranca\chat\bin\Debug\chat.exe.config
+G:\Shared drives\Trabalhos de Grupo\2º Semestre\Tópicos de Segurança\topicosseguranca\chat\bin\Debug\chat.exe
+G:\Shared drives\Trabalhos de Grupo\2º Semestre\Tópicos de Segurança\topicosseguranca\chat\bin\Debug\chat.pdb
+G:\Shared drives\Trabalhos de Grupo\2º Semestre\Tópicos de Segurança\topicosseguranca\chat\obj\Debug\Client.csproj.AssemblyReference.cache
+G:\Shared drives\Trabalhos de Grupo\2º Semestre\Tópicos de Segurança\topicosseguranca\chat\obj\Debug\chat.FormChatLogin.resources
+G:\Shared drives\Trabalhos de Grupo\2º Semestre\Tópicos de Segurança\topicosseguranca\chat\obj\Debug\chat.FormChat.resources
+G:\Shared drives\Trabalhos de Grupo\2º Semestre\Tópicos de Segurança\topicosseguranca\chat\obj\Debug\chat.Properties.Resources.resources
+G:\Shared drives\Trabalhos de Grupo\2º Semestre\Tópicos de Segurança\topicosseguranca\chat\obj\Debug\Client.csproj.GenerateResource.cache
+G:\Shared drives\Trabalhos de Grupo\2º Semestre\Tópicos de Segurança\topicosseguranca\chat\obj\Debug\Client.csproj.CoreCompileInputs.cache
+G:\Shared drives\Trabalhos de Grupo\2º Semestre\Tópicos de Segurança\topicosseguranca\chat\obj\Debug\chat.exe
+G:\Shared drives\Trabalhos de Grupo\2º Semestre\Tópicos de Segurança\topicosseguranca\chat\obj\Debug\chat.pdb
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca\chat\bin\Debug\chat.exe.config
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca\chat\bin\Debug\chat.exe
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca\chat\bin\Debug\chat.pdb
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca\chat\obj\Debug\Client.csproj.AssemblyReference.cache
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca\chat\obj\Debug\chat.FormChatLogin.resources
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca\chat\obj\Debug\chat.FormChat.resources
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca\chat\obj\Debug\chat.Properties.Resources.resources
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca\chat\obj\Debug\Client.csproj.GenerateResource.cache
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca\chat\obj\Debug\Client.csproj.CoreCompileInputs.cache
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca\chat\obj\Debug\chat.exe
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca\chat\obj\Debug\chat.pdb
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\chat\bin\Debug\chat.exe.config
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\chat\bin\Debug\chat.exe
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\chat\bin\Debug\chat.pdb
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\chat\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\chat\obj\Debug\chat.FormChatLogin.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\chat\obj\Debug\chat.FormChat.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\chat\obj\Debug\chat.Properties.Resources.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\chat\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\chat\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\chat\obj\Debug\chat.exe
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\chat\obj\Debug\chat.pdb
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\chat\bin\Debug\EntityFramework.dll
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\chat\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\chat\bin\Debug\EntityFramework.xml
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\chat\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-main\chat\obj\Debug\Client.csproj.Up2Date
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\bin\Debug\chat.exe.config
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\bin\Debug\chat.exe
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\bin\Debug\chat.pdb
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\bin\Debug\EntityFramework.dll
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\bin\Debug\EntityFramework.SqlServer.dll
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\bin\Debug\EntityFramework.xml
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\bin\Debug\EntityFramework.SqlServer.xml
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\obj\Debug\Client.csproj.AssemblyReference.cache
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\obj\Debug\chat.FormChatLogin.resources
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\obj\Debug\chat.FormChat.resources
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\obj\Debug\chat.Properties.Resources.resources
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\obj\Debug\Client.csproj.GenerateResource.cache
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\obj\Debug\Client.csproj.CoreCompileInputs.cache
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\obj\Debug\Client.csproj.Up2Date
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\obj\Debug\chat.exe
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\obj\Debug\chat.pdb
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-aeb\chat\bin\Debug\ProtocolSI.dll
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\bin\Debug\chat.exe.config
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\bin\Debug\chat.exe
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\bin\Debug\chat.pdb
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\bin\Debug\EntityFramework.dll
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\bin\Debug\EntityFramework.xml
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\chat.FormChatLogin.resources
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\chat.FormChat.resources
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\chat.formChatRegister.resources
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\chat.Properties.Resources.resources
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\Client.csproj.Up2Date
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\chat.exe
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\topicosseguranca-aeb_test\chat\obj\Debug\chat.pdb
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main\chat\bin\Debug\chat.exe.config
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main\chat\bin\Debug\chat.exe
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main\chat\bin\Debug\chat.pdb
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main\chat\bin\Debug\EntityFramework.dll
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main\chat\bin\Debug\EntityFramework.SqlServer.dll
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main\chat\bin\Debug\ProtocolSI.dll
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main\chat\bin\Debug\EntityFramework.xml
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main\chat\bin\Debug\EntityFramework.SqlServer.xml
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main\chat\obj\Debug\Client.csproj.AssemblyReference.cache
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main\chat\obj\Debug\chat.FormChatLogin.resources
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main\chat\obj\Debug\chat.FormChat.resources
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main\chat\obj\Debug\chat.formChatRegister.resources
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main\chat\obj\Debug\chat.Properties.Resources.resources
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main\chat\obj\Debug\Client.csproj.GenerateResource.cache
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main\chat\obj\Debug\Client.csproj.CoreCompileInputs.cache
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main\chat\obj\Debug\Client.csproj.Up2Date
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main\chat\obj\Debug\chat.exe
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main\chat\obj\Debug\chat.pdb
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\bin\Debug\chat.exe.config
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\bin\Debug\chat.exe
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\bin\Debug\chat.pdb
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\bin\Debug\EntityFramework.dll
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\bin\Debug\EntityFramework.SqlServer.dll
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\bin\Debug\ProtocolSI.dll
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\bin\Debug\EntityFramework.xml
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\bin\Debug\EntityFramework.SqlServer.xml
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\obj\Debug\Client.csproj.AssemblyReference.cache
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\obj\Debug\chat.FormChatLogin.resources
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\obj\Debug\chat.FormChat.resources
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\obj\Debug\chat.formChatRegister.resources
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\obj\Debug\chat.Properties.Resources.resources
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\obj\Debug\Client.csproj.GenerateResource.cache
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\obj\Debug\Client.csproj.CoreCompileInputs.cache
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\obj\Debug\Client.csproj.Up2Date
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\obj\Debug\chat.exe
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\obj\Debug\chat.pdb
+D:\TESP\2 semestre\Topicos de segurança\topicosseguranca-main_backup - Copy\chat\obj\Debug\chat.Migrations.initialmigration.resources
+C:\Users\aeb\Downloads\topicosseguranca-main (1)\topicosseguranca-main\chat\bin\Debug\chat.exe.config
+C:\Users\aeb\Downloads\topicosseguranca-main (1)\topicosseguranca-main\chat\bin\Debug\chat.exe
+C:\Users\aeb\Downloads\topicosseguranca-main (1)\topicosseguranca-main\chat\bin\Debug\chat.pdb
+C:\Users\aeb\Downloads\topicosseguranca-main (1)\topicosseguranca-main\chat\bin\Debug\EntityFramework.dll
+C:\Users\aeb\Downloads\topicosseguranca-main (1)\topicosseguranca-main\chat\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aeb\Downloads\topicosseguranca-main (1)\topicosseguranca-main\chat\bin\Debug\EntityFramework.xml
+C:\Users\aeb\Downloads\topicosseguranca-main (1)\topicosseguranca-main\chat\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aeb\Downloads\topicosseguranca-main (1)\topicosseguranca-main\chat\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\aeb\Downloads\topicosseguranca-main (1)\topicosseguranca-main\chat\obj\Debug\chat.FormChatLogin.resources
+C:\Users\aeb\Downloads\topicosseguranca-main (1)\topicosseguranca-main\chat\obj\Debug\chat.FormChat.resources
+C:\Users\aeb\Downloads\topicosseguranca-main (1)\topicosseguranca-main\chat\obj\Debug\chat.formChatRegister.resources
+C:\Users\aeb\Downloads\topicosseguranca-main (1)\topicosseguranca-main\chat\obj\Debug\chat.Migrations.initialmigration.resources
+C:\Users\aeb\Downloads\topicosseguranca-main (1)\topicosseguranca-main\chat\obj\Debug\chat.Properties.Resources.resources
+C:\Users\aeb\Downloads\topicosseguranca-main (1)\topicosseguranca-main\chat\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\aeb\Downloads\topicosseguranca-main (1)\topicosseguranca-main\chat\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\aeb\Downloads\topicosseguranca-main (1)\topicosseguranca-main\chat\obj\Debug\Client.csproj.Up2Date
+C:\Users\aeb\Downloads\topicosseguranca-main (1)\topicosseguranca-main\chat\obj\Debug\chat.exe
+C:\Users\aeb\Downloads\topicosseguranca-main (1)\topicosseguranca-main\chat\obj\Debug\chat.pdb
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\chat\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\chat\obj\Debug\chat.exe
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\chat\obj\Debug\chat.pdb
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\chat\bin\Debug\chat.exe.config
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\chat\bin\Debug\chat.exe
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\chat\bin\Debug\chat.pdb
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\chat\bin\Debug\EntityFramework.dll
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\chat\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\chat\bin\Debug\EntityFramework.xml
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\chat\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\chat\obj\Debug\chat.FormChatLogin.resources
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\chat\obj\Debug\chat.FormChat.resources
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\chat\obj\Debug\chat.formChatRegister.resources
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\chat\obj\Debug\chat.Migrations.initialmigration.resources
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\chat\obj\Debug\chat.Properties.Resources.resources
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\chat\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\chat\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\pedro\Desktop\2ºSemestre\TS\TSProjeto\chat\obj\Debug\Client.csproj.Up2Date
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\bin\Debug\chat.exe.config
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\bin\Debug\chat.exe
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\bin\Debug\chat.pdb
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\bin\Debug\EntityFramework.dll
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\bin\Debug\EntityFramework.SqlServer.dll
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\bin\Debug\ProtocolSI.dll
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\bin\Debug\EntityFramework.xml
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\bin\Debug\EntityFramework.SqlServer.xml
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\obj\Debug\Client.csproj.AssemblyReference.cache
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\obj\Debug\chat.FormChatLogin.resources
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\obj\Debug\chat.FormChat.resources
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\obj\Debug\chat.formChatRegister.resources
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\obj\Debug\chat.Migrations.initialmigration.resources
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\obj\Debug\chat.Properties.Resources.resources
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\obj\Debug\Client.csproj.GenerateResource.cache
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\obj\Debug\Client.csproj.CoreCompileInputs.cache
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\obj\Debug\Client.csproj.Up2Date
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\obj\Debug\chat.exe
+D:\TESP\2 semestre\Topicos de segurança\TSProjeto_FINAL\chat\obj\Debug\chat.pdb
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\bin\Debug\EntityFramework.dll
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\bin\Debug\EntityFramework.xml
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\obj\Debug\chat.formChatRegister.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\obj\Debug\chat.Migrations.initialmigration.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca\chat\obj\Debug\Client.csproj.Up2Date
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\chat\bin\Debug\chat.exe.config
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\chat\bin\Debug\chat.exe
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\chat\bin\Debug\chat.pdb
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\chat\bin\Debug\EntityFramework.dll
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\chat\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\chat\bin\Debug\EntityFramework.xml
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\chat\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\chat\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\chat\obj\Debug\chat.FormChatLogin.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\chat\obj\Debug\chat.FormChat.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\chat\obj\Debug\chat.formChatRegister.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\chat\obj\Debug\chat.Migrations.initialmigration.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\chat\obj\Debug\chat.Properties.Resources.resources
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\chat\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\chat\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\chat\obj\Debug\Client.csproj.Up2Date
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\chat\obj\Debug\chat.exe
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-backup - Copy\chat\obj\Debug\chat.pdb
+D:\TESP\2 semestre\topicosseguranca-main\chat\bin\Debug\chat.exe.config
+D:\TESP\2 semestre\topicosseguranca-main\chat\bin\Debug\chat.exe
+D:\TESP\2 semestre\topicosseguranca-main\chat\bin\Debug\chat.pdb
+D:\TESP\2 semestre\topicosseguranca-main\chat\bin\Debug\EntityFramework.dll
+D:\TESP\2 semestre\topicosseguranca-main\chat\bin\Debug\EntityFramework.SqlServer.dll
+D:\TESP\2 semestre\topicosseguranca-main\chat\bin\Debug\EntityFramework.xml
+D:\TESP\2 semestre\topicosseguranca-main\chat\bin\Debug\EntityFramework.SqlServer.xml
+D:\TESP\2 semestre\topicosseguranca-main\chat\obj\Debug\Client.csproj.AssemblyReference.cache
+D:\TESP\2 semestre\topicosseguranca-main\chat\obj\Debug\chat.FormChatLogin.resources
+D:\TESP\2 semestre\topicosseguranca-main\chat\obj\Debug\chat.FormChat.resources
+D:\TESP\2 semestre\topicosseguranca-main\chat\obj\Debug\chat.formChatRegister.resources
+D:\TESP\2 semestre\topicosseguranca-main\chat\obj\Debug\chat.Migrations.initialmigration.resources
+D:\TESP\2 semestre\topicosseguranca-main\chat\obj\Debug\chat.Properties.Resources.resources
+D:\TESP\2 semestre\topicosseguranca-main\chat\obj\Debug\Client.csproj.GenerateResource.cache
+D:\TESP\2 semestre\topicosseguranca-main\chat\obj\Debug\Client.csproj.CoreCompileInputs.cache
+D:\TESP\2 semestre\topicosseguranca-main\chat\obj\Debug\Client.csproj.Up2Date
+D:\TESP\2 semestre\topicosseguranca-main\chat\obj\Debug\chat.exe
+D:\TESP\2 semestre\topicosseguranca-main\chat\obj\Debug\chat.pdb
