@@ -107,6 +107,7 @@ namespace Server
 
                             List<string> dataLogin = new List<string>();
                             List<string> usersToList = new List<string>();
+                            string encryptedAck = string.Empty;
 
                             dataLogin = await ReadNetstreamParts(networkStream, protocolSI, clientPubKey);
 
@@ -118,15 +119,15 @@ namespace Server
                                     string username = dataLogin[1];
                                     string password = dataLogin[2];
 
+                                    ack = HandleControllers.handleLogin(dataLogin);
 
-                                    if (ValidationControllers.authUser(username, password))
+                                    Console.WriteLine("State login -- > " + ack);
+                                    encryptedAck = CryptControllers.encryptText(ack, clientPubKey);
+                                    sendAck = Encoding.UTF8.GetBytes(encryptedAck);
+                                    await networkStream.WriteAsync(sendAck, 0, sendAck.Length);
+
+                                    if (ack == "OK")
                                     {
-                                        ack = HandleControllers.handleLogin(dataLogin);
-                                        Console.WriteLine("State login -- > " + ack);
-                                        string encryptedAck = CryptControllers.encryptText(ack, clientPubKey);
-                                        sendAck = Encoding.UTF8.GetBytes(encryptedAck);
-
-                                        await networkStream.WriteAsync(sendAck, 0, sendAck.Length);
                                         Client clientC = new Client(client, dataLogin[1], clientPubKey);
                                         Clients.Add(clientC);
 
@@ -134,17 +135,13 @@ namespace Server
 
                                         usersToList = HandleControllers.handleListUsers();
                                         await BroadcastMessage(usersToList);
-                                        LogControllers.createLog(dataLogin[0], dataLogin[1], "Success");
-                                    }
-                                    else
-                                    {
-                                        ack = HandleControllers.handleLogin(dataLogin);
-                                        Console.WriteLine("State login -- > " + ack);
-                                        string encryptedAck = CryptControllers.encryptText(ack, clientPubKey);
-                                        sendAck = Encoding.UTF8.GetBytes(encryptedAck);
+                                        LogControllers.createLog(dataLogin[0], dataLogin[1], ack);
 
-                                        await networkStream.WriteAsync(sendAck, 0, sendAck.Length);
-                                        LogControllers.createLog(dataLogin[0], dataLogin[1], "Failed");
+                                        await Task.Delay(100);
+
+                                    } else
+                                    {
+                                        LogControllers.createLog(dataLogin[0], dataLogin[1], ack);
                                     }
                                 }
                             }

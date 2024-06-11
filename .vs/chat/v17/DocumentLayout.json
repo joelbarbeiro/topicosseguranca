@@ -3,19 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-async-main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|c:\\users\\aeb\\documents\\tesp\\2\u00BA semestre\\topicos de seguranca\\topicosseguranca-async-main\\server\\models\\cryptcontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|solutionrelative:server\\models\\cryptcontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-async-main\\chat\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|solutionrelative:chat\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-async-main\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|c:\\users\\aeb\\documents\\tesp\\2\u00BA semestre\\topicos de seguranca\\topicosseguranca-async-main\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|c:\\users\\aeb\\documents\\tesp\\2\u00BA semestre\\topicos de seguranca\\topicosseguranca-async-main\\chat\\chatlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|c:\\users\\aeb\\documents\\tesp\\2\u00BA semestre\\topicos de seguranca\\topicosseguranca-async-main\\server\\models\\cryptcontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DCF1117-1BAE-4300-B5A2-7678F593F0D3}|Server\\Server.csproj|solutionrelative:server\\models\\cryptcontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-async-main\\chat\\chatlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7180BD86-8C53-400E-BC6D-76C0D9A59C90}|chat\\Client.csproj|solutionrelative:chat\\chatlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -66,13 +66,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-async-main\\Server\\Program.cs",
               "RelativeDocumentMoniker": "Server\\Program.cs",
               "ToolTip": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-async-main\\Server\\Program.cs",
               "RelativeToolTip": "Server\\Program.cs",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAiwJQAAAAhAAAA",
+              "ViewState": "AQIAAHcAAAAAAAAAAAAAAJEAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T21:32:05.094Z",
               "EditorCaption": ""
@@ -81,30 +81,30 @@
         },
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "CryptControllers.cs",
               "DocumentMoniker": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-async-main\\Server\\models\\CryptControllers.cs",
               "RelativeDocumentMoniker": "Server\\models\\CryptControllers.cs",
               "ToolTip": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-async-main\\Server\\models\\CryptControllers.cs",
               "RelativeToolTip": "Server\\models\\CryptControllers.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAowDEAAAAAAAAA",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAwwDEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T21:04:58.511Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "chatClient.cs",
               "DocumentMoniker": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-async-main\\chat\\chatClient.cs",
               "RelativeDocumentMoniker": "chat\\chatClient.cs",
               "ToolTip": "C:\\Users\\aeb\\Documents\\TESP\\2\u00BA semestre\\Topicos de Seguranca\\topicosseguranca-async-main\\chat\\chatClient.cs",
               "RelativeToolTip": "chat\\chatClient.cs",
-              "ViewState": "AQIAAKEAAAAAAAAAAAAiwK0AAAAMAAAA",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAAAHgAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T21:40:52.988Z",
               "EditorCaption": ""
@@ -119,8 +119,7 @@
               "RelativeToolTip": "chat\\chatLogin.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAQwCMAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T21:32:50.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T21:32:50.793Z"
             }
           ]
         }

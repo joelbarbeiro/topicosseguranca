@@ -118,7 +118,7 @@ namespace chat
                                 break;
                         }
                     }
-                    Thread.Sleep(100); //ADICIONA UM TEMPO DE ESPERA 
+                    Thread.Sleep(150); //ADICIONA UM TEMPO DE ESPERA 
                 }
                 catch (Exception ex)
                 {
