@@ -238,10 +238,10 @@ C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-a
 C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-async-main\chat\obj\Debug\chat.FormChatLogin.resources
 C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-async-main\chat\obj\Debug\chat.FormChat.resources
 C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-async-main\chat\obj\Debug\chat.formChatRegister.resources
-C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-async-main\chat\obj\Debug\chat.Migrations.initialmigration.resources
 C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-async-main\chat\obj\Debug\chat.Properties.Resources.resources
 C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-async-main\chat\obj\Debug\Client.csproj.GenerateResource.cache
 C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-async-main\chat\obj\Debug\Client.csproj.CoreCompileInputs.cache
 C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-async-main\chat\obj\Debug\Client.csproj.Up2Date
 C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-async-main\chat\obj\Debug\chat.exe
 C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-async-main\chat\obj\Debug\chat.pdb
+C:\Users\aeb\Documents\TESP\2º semestre\Topicos de Seguranca\topicosseguranca-async-main\chat\obj\Debug\chat.Migrations.updt.resources

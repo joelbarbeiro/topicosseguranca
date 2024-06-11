@@ -102,6 +102,7 @@
             // 
             this.textBoxMessage.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMessage.Location = new System.Drawing.Point(16, 391);
+            this.textBoxMessage.MaxLength = 80;
             this.textBoxMessage.Multiline = true;
             this.textBoxMessage.Name = "textBoxMessage";
             this.textBoxMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;

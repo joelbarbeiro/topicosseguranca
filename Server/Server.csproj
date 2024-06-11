@@ -67,7 +67,7 @@
     <Compile Include="models\HandleControllers.cs" />
     <Compile Include="models\LogControllers.cs" />
     <Compile Include="models\User.cs" />
-    <Compile Include="models\msgHistory.cs" />
+    <Compile Include="models\MsgHistory.cs" />
     <Compile Include="models\ValidationControllers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

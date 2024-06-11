@@ -20,6 +20,7 @@ using System.Data.Entity.Migrations;
 using System.Data.Entity.Core.Metadata.Edm;
 using System.Runtime.InteropServices.ComTypes;
 using System.IO.Ports;
+using System.Runtime.InteropServices;
 
 namespace Server
 {
@@ -177,7 +178,9 @@ namespace Server
                             if (dataMessage.Count() > 0)
                             {
                                 LogControllers.createLog(dataMessage[0], dataMessage[1], dataMessage[2]);
+                                MsgHistory msgHistory = new MsgHistory(dataMessage[2], DateTime.Now, dataMessage[3]);
 
+                                HandleControllers.saveMessage(msgHistory);
                                 await BroadcastMessage(dataMessage);
                             }
                             break;

@@ -7,13 +7,13 @@ namespace chat.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class initialmigration : IMigrationMetadata
+    public sealed partial class updt : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initialmigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(updt));
         
         string IMigrationMetadata.Id
         {
-            get { return "202404271210327_initial migration"; }
+            get { return "202406112200048_updt"; }
         }
         
         string IMigrationMetadata.Source

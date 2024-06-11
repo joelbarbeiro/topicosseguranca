@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initialmigration : DbMigration
+    public partial class updt : DbMigration
     {
         public override void Up()
         {
@@ -23,6 +23,7 @@
                 c => new
                     {
                         MsgId = c.Int(nullable: false, identity: true),
+                        Type = c.String(),
                         User = c.String(),
                         Data = c.DateTime(nullable: false),
                         Messag = c.String(),

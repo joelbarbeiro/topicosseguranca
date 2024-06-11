@@ -80,9 +80,9 @@
     </Compile>
     <Compile Include="clientContext.cs" />
     <Compile Include="CryptFunctions.cs" />
-    <Compile Include="Migrations\202404271210327_initial migration.cs" />
-    <Compile Include="Migrations\202404271210327_initial migration.Designer.cs">
-      <DependentUpon>202404271210327_initial migration.cs</DependentUpon>
+    <Compile Include="Migrations\202406112200048_updt.cs" />
+    <Compile Include="Migrations\202406112200048_updt.Designer.cs">
+      <DependentUpon>202406112200048_updt.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="models\MessageChat.cs" />
@@ -98,8 +98,8 @@
     <EmbeddedResource Include="chatRegister.resx">
       <DependentUpon>chatRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404271210327_initial migration.resx">
-      <DependentUpon>202404271210327_initial migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202406112200048_updt.resx">
+      <DependentUpon>202406112200048_updt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

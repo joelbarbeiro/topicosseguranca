@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Net.Sockets;
+using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Contexts;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -92,6 +94,12 @@ namespace Server.models
         public static void removeUserFromList(TcpClient client)
         {
             Program.Clients.RemoveAll(user => user.TcpClient == client);
+        }
+        public static void saveMessage(MsgHistory messages)
+        {
+            serverContext context = new serverContext();
+            context.msgsHistory.Add(messages);
+            context.SaveChanges();
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Server.models
 {
-    public class msgHistory
+    public class MsgHistory
     {
         [Key]
         public int idMsgHist { get; set; }
@@ -16,11 +16,11 @@ namespace Server.models
         public DateTime dateTime { get; set; }
         public string Message { get; set; }
 
-        public msgHistory()
+        public MsgHistory()
         {
         }
 
-        public msgHistory(string user, DateTime dateTime, string message)
+        public MsgHistory(string user, DateTime dateTime, string message)
         {
             User = user;
             this.dateTime = dateTime;
