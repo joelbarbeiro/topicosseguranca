@@ -45,6 +45,10 @@ namespace Server.models
                     Console.WriteLine("ERRO AO ENCRIPTAR NO CLIENTE -->> " + ex);
                     return string.Empty;
                 }
+                finally
+                {
+
+                }
             }
         }
 
@@ -66,6 +70,10 @@ namespace Server.models
                 {
                     Console.WriteLine("DECRYPT " + ex);
                     return null;
+                }
+                finally
+                {
+
                 }
             }
         }

@@ -33,9 +33,9 @@ namespace chat
         public string serverPubKey = string.Empty;
 
 
-            public FormChatLogin()
+        public FormChatLogin()
         {
-            
+
 
             IPEndPoint endPoint = new IPEndPoint(IPAddress.Loopback, Port);
             CryptFunctions.keyGen(out pubKey, out privKey);
@@ -63,7 +63,7 @@ namespace chat
             int size;
 
 
-            
+
             if (serverPubKey == string.Empty)
             {
                 Console.WriteLine("Client pub key " + pubKey);
@@ -234,9 +234,11 @@ namespace chat
                     await Task.Delay(100);
 
                 }
+                preparedMessage.Clear();
             }
             catch (Exception ex)
             {
+                preparedMessage.Clear();
                 MessageBox.Show("Something went wrong: " + ex.Message);
             }
         }

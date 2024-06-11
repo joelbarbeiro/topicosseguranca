@@ -30,6 +30,7 @@ namespace chat
         public string pubKey;
         public string privKey;
         public string serverPubKey;
+        public bool isRunning = true;
 
         public FormChat(string userName, TcpClient tcpClient, NetworkStream netStream, string privKey, string pubKey, string serverPubKey)
         {
@@ -56,8 +57,7 @@ namespace chat
 
         private async void getMessages()
         {
-
-            while (true) // LOOP PARA LER MENSAGENS INFINITO
+            while (isRunning) // LOOP PARA LER MENSAGENS INFINITO
             {
                 try
                 {
@@ -74,10 +74,11 @@ namespace chat
 
                         string[] splitParts = decryptedPart.Split('=');
                         int numberParts = splitParts.Count();
-
-                        while (i<numberParts-1)
+                        Console.WriteLine("Num parts " + numberParts);
+                        while (i < numberParts - 1)
                         {
-                            msg = CryptFunctions.decryptText(splitParts[i]+'=', privKey);
+                            msg = CryptFunctions.decryptText(splitParts[i] + '=', privKey);
+
                             Console.WriteLine(msg);
                             data.Add(msg);
                             i++;
@@ -88,31 +89,31 @@ namespace chat
                         switch (data[0])
                         {
                             case "Message":
-                                    MessageChat messageChat = new MessageChat(data[1], data[2], data[3]);
-                                    // FAZ UPDATE A LISTA DE MENSAGENS NA THREAD DA UI
-                                    Invoke((MethodInvoker)delegate
-                                    {
-                                        Messages.Add(messageChat);
-                                        updateMessageList();
-                                    });
-                                    data.Clear();
+                                MessageChat messageChat = new MessageChat(data[1], data[2], data[3]);
+                                // FAZ UPDATE A LISTA DE MENSAGENS NA THREAD DA UI
+                                Invoke((MethodInvoker)delegate
+                                {
+                                    Messages.Add(messageChat);
+                                    updateMessageList();
+                                });
+                                data.Clear();
 
                                 break;
                             case "UserList":
-                                    List<string> UserList = new List<string>();
+                                List<string> UserList = new List<string>();
 
-                                    foreach (string u in data)
+                                foreach (string u in data)
+                                {
+                                    if (u != "UserList" && u != "EOT" && u != "Message")
                                     {
-                                        if (u != "UserList" && u != "EOT" && u != "Message")
-                                        {
-                                            UserList.Add(u);
-                                        }
+                                        UserList.Add(u);
                                     }
-                                    Invoke((MethodInvoker)delegate
-                                    {
-                                        updateUserList(UserList);
-                                    });
-                                    data.Clear();
+                                }
+                                Invoke((MethodInvoker)delegate
+                                {
+                                    updateUserList(UserList);
+                                });
+                                data.Clear();
 
                                 break;
                         }
@@ -124,7 +125,12 @@ namespace chat
                     Console.WriteLine("Exception: " + ex.Message);
                     break;
                 }
-                
+                finally
+                {
+                    Console.WriteLine("Continua");
+                    getMessages();
+                }
+
             }
         }
         private async Task<List<String>> ReadNetstreamParts(NetworkStream networkStream, ProtocolSI protocolSI, string clientPubKey)
@@ -149,7 +155,7 @@ namespace chat
                     break;
                 }
 
-                
+
 
             }
             return parts;
@@ -222,6 +228,10 @@ namespace chat
             {
                 MessageBox.Show("ALGO ERRADO NAO CERTO" + ex);
             }
+            finally
+            {
+                Console.WriteLine("keep going");
+            }
         }
 
         private void updateMessageList()
@@ -239,12 +249,9 @@ namespace chat
         {
             labelUserName.Text = user;
         }
-       
+
         private void buttonChatLogout_Click(object sender, EventArgs e)
         {
-
-            
-            //FormChatLogin formchatlogin = new FormChatLogin(tcpClient, privKey, pubKey, serverPubKey);
             FormChatLogin formchatlogin = new FormChatLogin();
             formchatlogin.Show();
 
@@ -252,14 +259,15 @@ namespace chat
         }
         private async void CloseClient()
         {
+            isRunning = false;
             byte[] eot = protocolSI.Make(ProtocolSICmdType.EOT);
             await netStream.WriteAsync(eot, 0, eot.Length);
             await netStream.ReadAsync(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
             serverPubKey = string.Empty;
-            
+
             await Task.Delay(100);
         }
-        
+
         public static void ReceiveNetworkStream(NetworkStream Stream)
         {
             netStream = Stream;
@@ -267,7 +275,7 @@ namespace chat
 
         private void FormChat_FormClosed(object sender, FormClosedEventArgs e)
         {
-                CloseClient();
+            CloseClient();
         }
     }
 }

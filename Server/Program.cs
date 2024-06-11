@@ -18,6 +18,8 @@ using System.Runtime.Remoting.Contexts;
 using System.Security.Principal;
 using System.Data.Entity.Migrations;
 using System.Data.Entity.Core.Metadata.Edm;
+using System.Runtime.InteropServices.ComTypes;
+using System.IO.Ports;
 
 namespace Server
 {
@@ -28,6 +30,7 @@ namespace Server
         private const int Port = 10000;
         private static string pubKey;
         private static string privKey;
+        public static bool running = true;
 
         static void Main(string[] args)
         {
@@ -79,6 +82,7 @@ namespace Server
                 ProtocolSI protocolSI = new ProtocolSI();
                 while (protocolSI.GetCmdType() != ProtocolSICmdType.EOT)
                 {
+                    running = true;
                     await networkStream.ReadAsync(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
                     byte[] sendAck = null;
                     string ack = null;
@@ -114,10 +118,11 @@ namespace Server
                                     string username = dataLogin[1];
                                     string password = dataLogin[2];
 
+
                                     if (ValidationControllers.authUser(username, password))
                                     {
                                         ack = HandleControllers.handleLogin(dataLogin);
-
+                                        Console.WriteLine("State login -- > " + ack);
                                         string encryptedAck = CryptControllers.encryptText(ack, clientPubKey);
                                         sendAck = Encoding.UTF8.GetBytes(encryptedAck);
 
@@ -133,6 +138,12 @@ namespace Server
                                     }
                                     else
                                     {
+                                        ack = HandleControllers.handleLogin(dataLogin);
+                                        Console.WriteLine("State login -- > " + ack);
+                                        string encryptedAck = CryptControllers.encryptText(ack, clientPubKey);
+                                        sendAck = Encoding.UTF8.GetBytes(encryptedAck);
+
+                                        await networkStream.WriteAsync(sendAck, 0, sendAck.Length);
                                         LogControllers.createLog(dataLogin[0], dataLogin[1], "Failed");
                                     }
                                 }
@@ -185,7 +196,7 @@ namespace Server
 
                             HandleControllers.removeUserFromList(client);
                             usersToRemove = HandleControllers.handleListUsers();
-                            
+
                             await BroadcastMessage(usersToRemove);
                             break;
                     }
@@ -207,50 +218,62 @@ namespace Server
         private async static Task<List<String>> ReadNetstreamParts(NetworkStream networkStream, ProtocolSI protocolSI, string clientPubKey)
         {
             List<String> parts = new List<String>();
-            bool running = true;
-            while (running)
+            try
             {
-
-                protocolSI.SetBuffer(protocolSI.Buffer);
-                string encryptedPart = protocolSI.GetStringFromData();
-
-                string decryptedMsg = CryptControllers.decryptText(encryptedPart, privKey);
-
-                string hash = await ReadMessage(networkStream, protocolSI);
-
-                string signHash = await ReadMessage(networkStream, protocolSI);
-
-                bool val = CryptControllers.VerifyHash(signHash, hash, clientPubKey);
-                if (val)
+                while (running)
                 {
-                    Console.WriteLine("Mensagem verificada");
+
+                    protocolSI.SetBuffer(protocolSI.Buffer);
+                    string encryptedPart = protocolSI.GetStringFromData();
+
+                    string decryptedMsg = CryptControllers.decryptText(encryptedPart, privKey);
+
+                    string hash = await ReadMessage(networkStream, protocolSI);
+
+                    string signHash = await ReadMessage(networkStream, protocolSI);
+
+                    bool val = CryptControllers.VerifyHash(signHash, hash, clientPubKey);
+                    if (val)
+                    {
+                        Console.WriteLine("Mensagem verificada");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Mensagem avariada!");
+                        parts.Clear();
+                        running = false;
+                        break;
+                    }
+
+                    parts.Add(decryptedMsg);
+
+                    if (decryptedMsg == "EOT")
+                    {
+                        running = false;
+                        break;
+                    }
+
+                    int bytesLoginRead = await networkStream.ReadAsync(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
+
+                    if (bytesLoginRead == 0)
+                    {
+                        running = false;
+                        break;
+                    }
+                    Console.WriteLine("running");
+
                 }
-                else
-                {
-                    Console.WriteLine("Mensagem avariada!");
-                    parts.Clear();
-                    running = false;
-                    break;
-                }
-
-                parts.Add(decryptedMsg);
-
-                if (decryptedMsg == "EOT")
-                {
-                    running = false;
-                    break;
-                }
-
-                int bytesLoginRead = await networkStream.ReadAsync(protocolSI.Buffer, 0, protocolSI.Buffer.Length);
-
-                if (bytesLoginRead == 0)
-                {
-                    running = false;
-                    break;
-                }
-                Console.WriteLine("running");
-
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error reading message " + ex);
+                running = false;
+            }
+            finally
+            {
+                Console.WriteLine("Ends read message");
+            }
+
             return parts;
         }
 
