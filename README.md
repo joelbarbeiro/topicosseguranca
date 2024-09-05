@@ -3,6 +3,16 @@
 
 Este projeto consiste no desenvolvimento de um chat utilizando **C#** no **.NET Framework**.
 
+## Elementos do  Grupo
+- André Barroso -  2231438
+- Joel Barbeiro - 2232356
+- Pedro Lourenço - 2232494
+
+## Pré-requisitos
+- .NET Framework 4.7.2 ou superior
+- SQL Server 2017 ou superior
+- Entity Framework Core 6
+
 ## Tecnologias Utilizadas
 
 - **ProtocolSI**: Utilizado para facilitar a comunicação entre servidor e cliente, fornecendo métodos eficientes de ligação.
